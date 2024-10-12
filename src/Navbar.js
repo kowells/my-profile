@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Navbar() {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <>
       <div className="min-h-full">
@@ -17,60 +23,38 @@ function Navbar() {
                 </div>
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-baseline space-x-4">
-                    <a
-                      href="#home"
-                      className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                      aria-current="page"
-                    >
-                      Home
-                    </a>
-                    <a
-                      href="#about"
-                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      About
-                    </a>
-                    <a
-                      href="#skills"
-                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      Skills
-                    </a>
-                    <a
-                      href="#portfolio"
-                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      Portfolio
-                    </a>
-                    <a
-                      href="#contact"
-                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      Contact
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="hidden md:block">
-                <div className="ml-4 flex items-center md:ml-6">
-                  {/* Profile dropdown */}
-                  <div className="relative ml-3">
-                    <div></div>
+                    {["Home", "About", "Skills", "Portfolio", "Contact"].map(
+                      (item, index) => (
+                        <a
+                          key={index}
+                          href={`#${item.toLowerCase()}`}
+                          className={`rounded-md px-3 py-2 text-sm font-medium ${
+                            item === "Home"
+                              ? "bg-gray-900 text-white"
+                              : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                          }`}
+                          aria-current={item === "Home" ? "page" : undefined}
+                        >
+                          {item}
+                        </a>
+                      )
+                    )}
                   </div>
                 </div>
               </div>
               <div className="-mr-2 flex md:hidden">
-                {/* Mobile menu button */}
                 <button
                   type="button"
+                  onClick={toggleMobileMenu}
                   className="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                   aria-controls="mobile-menu"
-                  aria-expanded="false"
+                  aria-expanded={isMobileMenuOpen}
                 >
-                  <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   <svg
-                    className="block h-6 w-6"
+                    className={`h-6 w-6 ${
+                      isMobileMenuOpen ? "hidden" : "block"
+                    }`}
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
@@ -84,7 +68,9 @@ function Navbar() {
                     />
                   </svg>
                   <svg
-                    className="hidden h-6 w-6"
+                    className={`h-6 w-6 ${
+                      isMobileMenuOpen ? "block" : "hidden"
+                    }`}
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
@@ -102,41 +88,24 @@ function Navbar() {
             </div>
           </div>
           {/* Mobile menu, show/hide based on menu state. */}
-          <div className="md:hidden" id="mobile-menu">
-            <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
-              <a
-                href="#home"
-                className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
-                aria-current="page"
-              >
-                Home
-              </a>
-              <a
-                href="#about"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-              >
-                About
-              </a>
-              <a
-                href="#skills"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-              >
-                Skills
-              </a>
-              <a
-                href="#portfolio"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-              >
-                Portfolio
-              </a>
-              <a
-                href="#contact"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-              >
-                Contact
-              </a>
+          {isMobileMenuOpen && (
+            <div className="md:hidden" id="mobile-menu">
+              <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+                {["Home", "About", "Skills", "Portfolio", "Contact"].map(
+                  (item, index) => (
+                    <a
+                      key={index}
+                      href={`#${item.toLowerCase()}`}
+                      className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+                      aria-current={item === "Home" ? "page" : undefined}
+                    >
+                      {item}
+                    </a>
+                  )
+                )}
+              </div>
             </div>
-          </div>
+          )}
         </nav>
 
         <header></header>
@@ -146,12 +115,13 @@ function Navbar() {
             className="home"
             id="home"
             style={{
+              height: "100vh", // Set height to full screen
               display: "flex",
-              justifyContent: "flex-start",
+              justifyContent: "center",
               alignItems: "center",
               paddingTop: "80px",
-              height: "calc(100vh - 80px)",
               backgroundColor: "#112240",
+              overflow: "hidden", // Prevent overflow
             }}
           >
             <div className="content" style={{ flex: 1, maxWidth: "50%" }}>
@@ -241,9 +211,15 @@ function Navbar() {
             className="about"
             id="about"
             style={{
+              height: "100vh", // Set height to full screen
               textAlign: "center",
               backgroundColor: "#112240",
               padding: "100px 50px",
+              overflow: "hidden", // Prevent overflow
+              display: "flex", // Enable Flexbox
+              flexDirection: "column", // Stack items vertically
+              justifyContent: "center", // Center items vertically
+              alignItems: "center", // Center items horizontally
             }}
           >
             <h2
@@ -268,9 +244,11 @@ function Navbar() {
             className="skills"
             id="skills"
             style={{
+              height: "100vh", // Set height to full screen
               textAlign: "center",
               backgroundColor: "#112240",
               padding: "100px 50px",
+              overflow: "hidden", // Prevent overflow
             }}
           >
             <h2
@@ -368,6 +346,7 @@ function Navbar() {
             className="portfolio"
             id="portfolio"
             style={{
+              height: "150vh", // Set height to full screen
               textAlign: "center",
               backgroundColor: "#112240",
               padding: "100px 50px",
@@ -495,14 +474,20 @@ function Navbar() {
             className="contact-me"
             id="contact"
             style={{
+              height: "100vh", // Set height to full screen
               textAlign: "center",
               backgroundColor: "#112240",
               padding: "100px 50px",
+              overflow: "hidden", // Prevent overflow
+              display: "flex", // Enable Flexbox
+              flexDirection: "column", // Stack items vertically
+              justifyContent: "center", // Center items vertically
+              alignItems: "center", // Center items horizontally
             }}
           >
             <div
               className="container"
-              style={{ maxWidth: "800px", margin: "0 auto" }}
+              style={{ maxWidth: "800px", width: "100%", margin: "0 auto" }}
             >
               <h2
                 style={{
@@ -522,103 +507,67 @@ function Navbar() {
                   gap: "30px",
                 }}
               >
-                <div
-                  className="contact-item"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    backgroundColor: "#0a192f",
-                    padding: "20px",
-                    borderRadius: "10px",
-                    width: "100%",
-                    maxWidth: "600px",
-                  }}
-                >
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
-                    alt="Email"
+                {[
+                  {
+                    id: "email",
+                    imgSrc:
+                      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+                    alt: "Email",
+                    link: "mailto:ridwand117@gmail.com",
+                    text: "ridwand117@gmail.com",
+                  },
+                  {
+                    id: "whatsapp",
+                    imgSrc:
+                      "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
+                    alt: "WhatsApp",
+                    link: "https://wa.me/6282139922566",
+                    text: "082139922566",
+                  },
+                  {
+                    id: "linkedin",
+                    imgSrc:
+                      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
+                    alt: "LinkedIn",
+                    link: "https://www.linkedin.com/in/ridwan-darmawan-544aa0234/",
+                    text: "www.linkedin.com/in/ridwan-darmawan-544aa0234/",
+                  },
+                ].map(({ id, imgSrc, alt, link, text }) => (
+                  <div
+                    key={id}
+                    className="contact-item"
                     style={{
-                      width: "40px",
-                      height: "40px",
-                      marginRight: "20px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      backgroundColor: "#0a192f",
+                      padding: "20px",
+                      borderRadius: "10px",
+                      width: "100%",
+                      maxWidth: "600px",
                     }}
-                  />
-                  <p style={{ color: "#fff", fontSize: "1.2rem", margin: 0 }}>
-                    Email:{" "}
-                    <a
-                      href="mailto:youremail@example.com"
-                      style={{ color: "#00bfff", textDecoration: "none" }}
-                    >
-                      ridwand117@gmail.com
-                    </a>
-                  </p>
-                </div>
-                <div
-                  className="contact-item"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    backgroundColor: "#0a192f",
-                    padding: "20px",
-                    borderRadius: "10px",
-                    width: "100%",
-                    maxWidth: "600px",
-                  }}
-                >
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                    alt="WhatsApp"
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      marginRight: "20px",
-                    }}
-                  />
-                  <p style={{ color: "#fff", fontSize: "1.2rem", margin: 0 }}>
-                    WhatsApp:{" "}
-                    <a
-                      href="https://wa.me/1234567890"
-                      style={{ color: "#00bfff", textDecoration: "none" }}
-                    >
-                      082139922566
-                    </a>
-                  </p>
-                </div>
-                <div
-                  className="contact-item"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    backgroundColor: "#0a192f",
-                    padding: "20px",
-                    borderRadius: "10px",
-                    width: "100%",
-                    maxWidth: "600px",
-                  }}
-                >
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
-                    alt="LinkedIn"
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      marginRight: "20px",
-                    }}
-                  />
-                  <p style={{ color: "#fff", fontSize: "1.2rem", margin: 0 }}>
-                    LinkedIn:{" "}
-                    <a
-                      href="https://linkedin.com/in/yourprofile"
-                      target="_blank"
-                      style={{ color: "#00bfff", textDecoration: "none" }}
-                    >
-                      www.linkedin.com/in/ridwan-darmawan-544aa0234/
-                    </a>
-                  </p>
-                </div>
+                  >
+                    <img
+                      src={imgSrc}
+                      alt={alt}
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                        marginRight: "20px",
+                      }}
+                    />
+                    <p style={{ color: "#fff", fontSize: "1.2rem", margin: 0 }}>
+                      <a
+                        href={link}
+                        target="_blank" // Ensure new tab for external links
+                        rel="noopener noreferrer" // For security reasons
+                        style={{ color: "#00bfff", textDecoration: "none" }}
+                      >
+                        {text}
+                      </a>
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
