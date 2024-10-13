@@ -55,7 +55,7 @@ function App() {
         >
           <h2 className="text-white text-5xl mb-5">About Me</h2>
           <p className="text-gray-400 text-xl max-w-2xl text-center leading-relaxed">
-            I am an informatics student with skills in programming and software
+            I am a final-year student with skills in programming and software
             development, supported by experience in team projects. I have
             expertise as a drone pilot, specializing in videography and mapping
             applications, having successfully completed several projects in this
@@ -151,22 +151,23 @@ function App() {
             <div className="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Notes App Backend",
-                  description: "Proyek Akhir Course Backend Dicoding",
+                  title: "Bookshelf API",
+                  description:
+                    "Proyek akhir dari Course Belajar Back-End Pemula dengan Javascript Dicoding yang bertujuan membuat API untuk catatan/notes",
                   image: "/images/notes.jpg",
                   link: "https://github.com/kowells/notes-app-back-end",
                 },
                 {
                   title: "Statistik Pengunjung Perpustakaan",
                   description:
-                    "Proyek Magang di Perpustakaan Grhatama Pustaka Yogyakarta",
+                    "Proyek website perhitungan statistik jumlah pengunjung di Grhatama Pustaka, bertujuan untuk menghitung dan menganalisis jumlah pengunjung secara efektif",
                   image: "/images/perpustakaan.png",
                   link: "https://github.com/kowells/project-magang",
                 },
                 {
                   title: "People Counting Using YOLOv8",
                   description:
-                    "Proyek Skripsi Perhitungan Pengunjung Menggunakan YOLOv8n Secara Real-time",
+                    "Proyek sistem perhitungan pengunjung yang dikembangkan untuk pusat perbelanjaan, di rancang untuk memantau dan menganalisis jumlah pengunjung secara real-time",
                   image: "/images/people-counting.png",
                   link: "https://github.com/yourproject3",
                 },
