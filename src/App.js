@@ -153,7 +153,7 @@ function App() {
                 {
                   title: "Qlearning",
                   description: "Web Learning Management System",
-                  image: "/images/qlearning.jpg",
+                  image: "/images/qlearning.png",
                   link: "https://github.com/",
                 },
                 {
