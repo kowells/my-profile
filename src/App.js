@@ -24,7 +24,7 @@ function App() {
               {" "}
               {/* Menambahkan justify-center */}
               <a
-                href="https://drive.google.com/file/d/1SISp3_L1UTsQfr8boXC3QyUTLXhQNRlB/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1mtcHH7qUJQPg2ZfPpuX-dXvZq5sjeNtO/view"
                 className="bg-sky-500 text-white py-2 px-4 rounded-md text-base transition-colors duration-300 hover:bg-sky-300"
               >
                 View CV
@@ -55,13 +55,13 @@ function App() {
         >
           <h2 className="text-white text-5xl mb-5">About Me</h2>
           <p className="text-gray-400 text-xl max-w-2xl text-center leading-relaxed">
-            I am a final-year student with skills in programming and software
-            development, supported by experience in team projects. I have
-            expertise as a drone pilot, specializing in videography and mapping
-            applications, having successfully completed several projects in this
-            field. As a fast learner with a keen interest in the latest
-            technologies, I possess strong analytical skills and a passion for
-            continuous improvement.
+            I am a graduate of Informatics from UPN "Veteran" Yogyakarta with
+            over a year of experience in web development. I have worked as a
+            freelance web developer, a back-end engineer at Sobat Gurun, and I
+            am currently a web developer at QHomemart Yogyakarta. I am
+            passionate about web development, data science, and machine
+            learning. Additionally, I have experience in drone piloting and have
+            contributed to several mapping projects and video profiles.
           </p>
         </section>
 
@@ -150,6 +150,12 @@ function App() {
             <h2 className="text-white text-4xl mb-12">My Portfolio</h2>
             <div className="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
+                {
+                  title: "Qlearning",
+                  description: "Web Learning Management System",
+                  image: "/images/qlearning.jpg",
+                  link: "https://github.com/",
+                },
                 {
                   title: "Bookshelf API",
                   description:
