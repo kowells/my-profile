@@ -14,7 +14,7 @@ function App() {
         "Web Learning Management System untuk e-learning interaktif.",
       images: ["/images/qlearning.png", "/images/qlearning2.png"],
       link: "https://github.com/",
-      tools: ["React", "Node.js", "Express", "MySQL"],
+      tools: ["Codeigniter 4", "Datatables", "PHP", "MySQL"],
     },
     {
       title: "Bookshelf API",
@@ -30,7 +30,7 @@ function App() {
         "Aplikasi untuk menghitung dan menganalisis statistik pengunjung di Grhatama Pustaka.",
       images: ["/images/perpustakaan.png", "/images/perpustakaan2.png"],
       link: "https://github.com/kowells/project-magang",
-      tools: ["PHP", "CodeIgniter", "MySQL", "Chart.js"],
+      tools: ["PHP", "MySQL"],
     },
     {
       title: "People Counting Using YOLOv8",
@@ -38,7 +38,7 @@ function App() {
         "Sistem deteksi dan perhitungan pengunjung real-time menggunakan YOLOv8.",
       images: ["/images/people-counting.png", "/images/people-counting2.png"],
       link: "https://github.com/yourproject3",
-      tools: ["Python", "YOLOv8", "OpenCV", "Drone"],
+      tools: ["Python", "YOLOv8", "OpenCV", "Realtime"],
     },
     {
       title: "Data Science Project",
@@ -61,359 +61,275 @@ function App() {
       description: "Kumpulan video hasil aerial shoot menggunakan drone.",
       images: ["/images/drone.png", "/images/drone2.png"],
       link: "https://www.youtube.com/playlist?list=PL_Cg8j6TEJU2rvuydnnm2IP5lSH_LTbFB",
-      tools: ["Drone", "Video Editing", "Premiere Pro"],
+      tools: ["Drone", "Video Editing", "Pilot Drone"],
     },
   ];
+
   const openModal = (project) => {
     setSelectedProject(project);
     setCurrentImage(0);
   };
 
-  const closeModal = () => {
-    setSelectedProject(null);
-  };
+  const closeModal = () => setSelectedProject(null);
 
   return (
-    <div className="App">
+    <div className="App font-sans bg-[#0a192f] text-white scroll-smooth">
       <Navbar />
-      <header></header>
+
       <main>
-        {/* Home Section  */}
+        {/* ===== HOME SECTION ===== */}
         <section
-          className="home min-h-screen flex flex-col-reverse md:flex-row justify-center items-center pt-20 bg-[#112240] px-6 md:px-16"
           id="home"
+          className="min-h-screen flex flex-col-reverse md:flex-row justify-center items-center pt-20 bg-[#112240] px-6 md:px-16"
         >
-          <div className="content text-center md:text-left flex-1 max-w-lg mt-8 md:mt-0">
-            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl mb-2">
-              Hi, I'm <span className="text-sky-400">Ridwan Darmawan</span>
-            </h1>
-            <h3 className="text-sky-400 text-xl sm:text-2xl mb-4">
+          {/* TEXT */}
+          <div className="text-center md:text-left flex-1 max-w-2xl mt-8 md:mt-0">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4"
+            >
+              Hi, I'm{" "}
+              <span className="text-[#64ffda] whitespace-nowrap">
+                Ridwan Darmawan
+              </span>
+            </motion.h1>
+
+            <h3 className="text-[#64ffda] font-semibold text-xl sm:text-2xl mb-5">
               Junior Developer
             </h3>
-            <p className="text-gray-400 text-base mb-5">
-              I am enthusiastic in technology and have a strong desire to learn.
+
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8 max-w-md md:max-w-lg mx-auto md:mx-0">
+              Passionate about building modern, efficient web applications and
+              continuously exploring new technologies.
             </p>
-            <div className="buttons flex flex-col sm:flex-row justify-center md:justify-start space-y-3 sm:space-y-0 sm:space-x-4 mt-4">
+
+            <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
               <a
-                href="https://drive.google.com/file/d/1K0To7ndkOLm5nRuJXT22p9slye-JWSaf/view?usp=drive_link"
-                className="bg-sky-500 text-white py-2 px-6 rounded-md text-base hover:bg-sky-300 transition"
+                href="https://drive.google.com/file/d/1K0To7ndkOLm5nRuJXT22p9slye-JWSaf/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#64ffda] text-[#0a192f] py-2.5 px-8 rounded-md text-base font-medium hover:bg-transparent hover:text-[#64ffda] border border-[#64ffda] transition-all duration-300"
               >
                 View CV
               </a>
               <a
                 href="#contact"
-                className="border border-sky-500 text-sky-500 py-2 px-6 rounded-md text-base hover:bg-sky-300 hover:text-white transition"
+                className="border border-[#64ffda] text-[#64ffda] py-2.5 px-8 rounded-md text-base font-medium hover:bg-[#64ffda] hover:text-[#0a192f] transition-all duration-300"
               >
                 Contact Me
               </a>
             </div>
           </div>
 
-          <div className="image flex justify-center md:ml-10">
+          {/* IMAGE */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="flex justify-center md:ml-10"
+          >
             <img
               src="/images/ridwan.jpg"
               alt="Ridwan Darmawan"
-              className="w-40 sm:w-52 md:w-60 h-auto rounded-full object-cover"
+              className="w-40 sm:w-52 md:w-60 rounded-full shadow-lg ring-4 ring-[#64ffda]/30"
             />
+          </motion.div>
+        </section>
+
+        {/* ===== ABOUT SECTION ===== */}
+        <section
+          id="about"
+          className="min-h-screen flex flex-col justify-center items-center bg-[#0a192f] px-6 py-20"
+        >
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-center relative">
+              About Me
+              <span className="block w-20 h-[3px] bg-[#64ffda] mx-auto mt-3 rounded"></span>
+            </h2>
+
+            <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify">
+              Saya <span className="text-white font-semibold">Ridwan Darmawan</span>,
+              lulusan <span className="text-[#64ffda]">S1 Informatika UPN “Veteran” Yogyakarta</span> dengan
+              pengalaman lebih dari 1 tahun sebagai{" "}
+              <span className="text-white font-medium">Back End Developer</span>. Saat ini saya
+              bekerja sebagai{" "}
+              <span className="text-white font-medium">
+                Full Stack Developer di PT Qhome Sukses Abadi
+              </span>{" "}
+              dan telah mengembangkan berbagai sistem berbasis web menggunakan{" "}
+              <span className="text-[#64ffda]">CodeIgniter</span>,{" "}
+              <span className="text-[#64ffda]">Express.js</span>, dan{" "}
+              <span className="text-[#64ffda]">MySQL</span>.
+            </p>
+
+            <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify mt-6">
+              Selain itu, saya memiliki pengalaman sebagai{" "}
+              <span className="text-white font-medium">IT Support</span>, mencakup instalasi PC,
+              troubleshooting, crimping kabel LAN, hingga konfigurasi access point.
+              Saya dikenal cepat belajar, analitis, dan adaptif dengan semangat tinggi
+              untuk menciptakan solusi teknologi yang efisien.
+            </p>
           </div>
         </section>
 
-        {/* About Section  */}
-        <section
-          className="about min-h-screen flex flex-col justify-center items-center bg-[#112240] px-6 py-20 text-center"
-          id="about"
-        >
-          <h2 className="text-white text-3xl sm:text-4xl md:text-5xl mb-6">
-            About Me
+        {/* ===== SKILLS SECTION ===== */}
+        <section id="skills" className="bg-[#112240] py-20 text-center">
+          <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold mb-12">
+            My Skills
           </h2>
-          <p className="text-gray-400 text-base sm:text-lg md:text-xl max-w-3xl leading-relaxed">
-            I am a graduate of Informatics from UPN "Veteran" Yogyakarta with
-            over a year of experience in web development. I have worked as a
-            freelance web developer, a back-end engineer at Sobat Gurun, and I
-            am currently a web developer at QHomemart Yogyakarta. I am
-            passionate about web development, data science, and machine
-            learning. Additionally, I have experience in drone piloting and have
-            contributed to several mapping projects and video profiles.
-          </p>
-        </section>
-
-        {/* Skills Section  */}
-        <section className="skills text-center bg-[#112240] py-20" id="skills">
-          <h2 className="text-white text-3xl sm:text-4xl mb-10">My Skills</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 px-6 md:px-12">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 px-8 max-w-6xl mx-auto">
             {[
-              {
-                name: "HTML",
-                img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-              },
-              {
-                name: "CSS",
-                img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-              },
-              {
-                name: "JavaScript",
-                img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-              },
-              {
-                name: "React",
-                img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-              },
-              {
-                name: "Node.js",
-                img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-              },
-              {
-                name: "Python",
-                img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-              },
-              {
-                name: "Tailwind",
-                img: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
-              },
-              {
-                name: "PHP",
-                img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-              },
-              {
-                name: "MySQL",
-                img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-              },
-              {
-                name: "Bootstrap",
-                img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-              },
-              {
-                name: "Drone Pilot",
-                img: "https://i.pinimg.com/originals/ba/d6/f7/bad6f7ea11ce3e085230ff0ed8bee378.jpg",
-              },
-              {
-                name: "MS Office",
-                img: "https://www.logo.wine/a/logo/Microsoft_Office_2013/Microsoft_Office_2013-Logo.wine.svg",
-              },
-              {
-                name: "Pix4D",
-                img: "https://thedronecentre.ae/wp-content/uploads/2021/09/new_capture_name_light_v.svg",
-              },
+              "HTML",
+              "CSS",
+              "Bootstrap",
+              "JavaScript",
+              "React",
+              "Node.js",
+              "Python",
+              "PHP",
+              "MySQL",
+              "Tailwind",
+              "Docker",
             ].map((skill, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="flex flex-col items-center justify-center bg-[#0a192f] rounded-lg p-4 hover:scale-105 transition-transform"
+                whileHover={{ scale: 1.08 }}
+                className="bg-[#0a192f] p-5 rounded-lg shadow-md hover:shadow-[#64ffda]/30 transition-all"
               >
-                <img
-                  src={skill.img}
-                  alt={skill.name}
-                  className="w-14 h-14 mb-2"
-                />
-
-                <p className="text-white text-sm sm:text-base">{skill.name}</p>
-              </div>
+                <p className="text-white text-lg font-medium">{skill}</p>
+              </motion.div>
             ))}
           </div>
         </section>
 
-        {/* Portfolio Section */}
-        <section
-          className="portfolio text-center bg-[#112240] py-20 px-6"
-          id="portfolio"
-        >
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-white text-3xl sm:text-4xl mb-10">
+        {/* ===== PORTFOLIO SECTION ===== */}
+        <section id="portfolio" className="bg-[#0a192f] py-20 px-6 text-center">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold mb-12">
               My Portfolio
             </h2>
 
-            {/* Grid Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {projects.map((project, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {projects.map((project, i) => (
                 <motion.div
-                  key={index}
-                  className="bg-[#0a192f] rounded-lg overflow-hidden cursor-pointer transform transition hover:scale-105 hover:shadow-lg"
-                  whileHover={{ scale: 1.05 }}
-                  onClick={() => setSelectedProject(project)}
+                  key={i}
+                  whileHover={{ scale: 1.03 }}
+                  className="bg-[#112240] rounded-lg overflow-hidden shadow-md hover:shadow-[#64ffda]/20 cursor-pointer transition"
+                  onClick={() => openModal(project)}
                 >
                   <img
                     src={project.images[0]}
                     alt={project.title}
-                    className="w-full h-40 object-cover"
+                    className="w-full h-44 object-cover"
                   />
-                  <div className="p-6">
-                    <h3 className="text-white text-xl mb-2">{project.title}</h3>
-                    <p className="text-gray-400 text-sm mb-3">
+                  <div className="p-5 text-left">
+                    <h3 className="text-white text-xl font-semibold mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-400 text-sm mb-4">
                       {project.description}
                     </p>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap justify-center gap-2 mb-3">
-                      {project.tools.map((tool, i) => (
+                    <div className="flex flex-wrap gap-2">
+                      {project.tools.map((tool, j) => (
                         <span
-                          key={i}
+                          key={j}
                           className="text-[#64ffda] border border-[#64ffda] text-xs px-2 py-1 rounded-full"
                         >
                           {tool}
                         </span>
                       ))}
                     </div>
-
-                    <p className="text-[#64ffda] font-medium">
-                      Click to view more
-                    </p>
                   </div>
                 </motion.div>
               ))}
             </div>
           </div>
 
-          {/* Modal with Carousel */}
+          {/* MODAL */}
           <AnimatePresence>
             {selectedProject && (
               <motion.div
-                className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex justify-center items-center z-50 p-4"
+                className="fixed inset-0 bg-black/70 flex justify-center items-center z-50 p-4 backdrop-blur-sm"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
                 <motion.div
-                  className="bg-[#0a192f] rounded-lg max-w-2xl w-full relative shadow-lg p-6"
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  exit={{ scale: 0.9, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                  className="bg-[#112240] rounded-lg max-w-2xl w-full relative p-6"
+                  initial={{ scale: 0.9 }}
+                  animate={{ scale: 1 }}
+                  exit={{ scale: 0.9 }}
                 >
-                  {/* Tombol Close */}
                   <button
                     onClick={closeModal}
                     className="absolute top-3 right-3 text-gray-400 hover:text-white text-2xl"
                   >
                     &times;
                   </button>
-
-                  {/* Carousel */}
-                  <div className="relative">
-                    <img
-                      src={selectedProject.images[currentImage]}
-                      alt={selectedProject.title}
-                      className="w-full h-64 object-cover rounded-md"
-                    />
-                    {selectedProject.images.length > 1 && (
-                      <>
-                        <button
-                          onClick={() =>
-                            setCurrentImage(
-                              (prev) =>
-                                (prev - 1 + selectedProject.images.length) %
-                                selectedProject.images.length
-                            )
-                          }
-                          className="absolute left-2 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-60 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-90"
-                        >
-                          ‹
-                        </button>
-                        <button
-                          onClick={() =>
-                            setCurrentImage(
-                              (prev) =>
-                                (prev + 1) % selectedProject.images.length
-                            )
-                          }
-                          className="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-60 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-90"
-                        >
-                          ›
-                        </button>
-                      </>
-                    )}
-                  </div>
-
-                  {/* Info Project */}
-                  <div className="mt-6 text-center">
-                    <h3 className="text-white text-2xl mb-3">
-                      {selectedProject.title}
-                    </h3>
-                    <p className="text-gray-400 text-base mb-6">
-                      {selectedProject.description}
-                    </p>
-
-                    {/* Tags di modal juga */}
-                    <div className="flex flex-wrap justify-center gap-2 mb-6">
-                      {selectedProject.tools.map((tool, i) => (
-                        <span
-                          key={i}
-                          className="text-[#64ffda] border border-[#64ffda] text-xs px-2 py-1 rounded-full"
-                        >
-                          {tool}
-                        </span>
-                      ))}
-                    </div>
-
-                    <a
-                      href={selectedProject.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block px-6 py-2 border-2 border-[#64ffda] text-[#64ffda] rounded-lg transition-colors duration-300 hover:bg-[#64ffda] hover:text-[#0a192f]"
-                    >
-                      View Project
-                    </a>
-                  </div>
+                  <img
+                    src={selectedProject.images[currentImage]}
+                    alt={selectedProject.title}
+                    className="w-full h-64 object-cover rounded-md mb-4"
+                  />
+                  <h3 className="text-2xl mb-3">{selectedProject.title}</h3>
+                  <p className="text-gray-400 mb-4">
+                    {selectedProject.description}
+                  </p>
+                  <a
+                    href={selectedProject.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-2 border-[#64ffda] text-[#64ffda] px-5 py-2 rounded hover:bg-[#64ffda] hover:text-[#0a192f] transition"
+                  >
+                    View Project
+                  </a>
                 </motion.div>
               </motion.div>
             )}
           </AnimatePresence>
         </section>
 
-        {/* Contact Section  */}
+        {/* ===== CONTACT SECTION ===== */}
         <section
-          className="contact-me bg-[#112240] py-20 px-6 flex flex-col justify-center items-center text-center"
           id="contact"
+          className="bg-[#112240] py-20 px-6 flex flex-col items-center text-center"
         >
-          <h2 className="text-white text-3xl sm:text-4xl mb-10">Contact Me</h2>
+          <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold mb-12">
+            Contact Me
+          </h2>
           <div className="flex flex-col gap-6 w-full max-w-2xl">
             {[
               {
-                id: "email",
-                imgSrc:
-                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
-                alt: "Email",
+                label: "Email",
                 link: "mailto:ridwand117@gmail.com",
                 text: "ridwand117@gmail.com",
               },
               {
-                id: "whatsapp",
-                imgSrc:
-                  "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
-                alt: "WhatsApp",
+                label: "WhatsApp",
                 link: "https://wa.me/6282139922566",
-                text: "082139922566",
+                text: "0821-3992-2566",
               },
               {
-                id: "linkedin",
-                imgSrc:
-                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
-                alt: "LinkedIn",
+                label: "LinkedIn",
                 link: "https://www.linkedin.com/in/ridwan-darmawan-544aa0234/",
-                text: "www.linkedin.com/in/ridwan-darmawan-544aa0234/",
+                text: "linkedin.com/in/ridwan-darmawan",
               },
-            ].map((c) => (
-              <div
-                key={c.id}
-                className="flex flex-col sm:flex-row items-center justify-center bg-[#0a192f] p-4 rounded-lg hover:scale-105 transition"
+            ].map((c, i) => (
+              <a
+                key={i}
+                href={c.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#0a192f] p-5 rounded-lg text-[#64ffda] hover:bg-[#64ffda] hover:text-[#0a192f] transition transform hover:scale-105"
               >
-                <img
-                  src={c.imgSrc}
-                  alt={c.alt}
-                  className="w-10 h-10 mb-2 sm:mb-0 sm:mr-4"
-                />
-                <a
-                  href={c.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-400 text-lg hover:text-sky-300"
-                >
-                  {c.text}
-                </a>
-              </div>
+                {c.label}: <span className="font-semibold">{c.text}</span>
+              </a>
             ))}
           </div>
         </section>
       </main>
-
     </div>
   );
 }

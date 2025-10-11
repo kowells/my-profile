@@ -1,7 +1,78 @@
 import Navbar from "./Navbar";
 import "./App.css";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 function App() {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const projects = [
+    {
+      title: "Qlearning",
+      description:
+        "Web Learning Management System untuk e-learning interaktif.",
+      images: ["/images/qlearning.png", "/images/qlearning2.png"],
+      link: "https://github.com/",
+      tools: ["React", "Node.js", "Express", "MySQL"],
+    },
+    {
+      title: "Bookshelf API",
+      description:
+        "API sederhana untuk mengelola catatan buku menggunakan Node.js dan Hapi Framework.",
+      images: ["/images/notes.jpg", "/images/notes2.png"],
+      link: "https://github.com/kowells/notes-app-back-end",
+      tools: ["Node.js", "Hapi", "Jest", "Postman"],
+    },
+    {
+      title: "Statistik Pengunjung Perpustakaan",
+      description:
+        "Aplikasi untuk menghitung dan menganalisis statistik pengunjung di Grhatama Pustaka.",
+      images: ["/images/perpustakaan.png", "/images/perpustakaan2.png"],
+      link: "https://github.com/kowells/project-magang",
+      tools: ["PHP", "CodeIgniter", "MySQL", "Chart.js"],
+    },
+    {
+      title: "People Counting Using YOLOv8",
+      description:
+        "Sistem deteksi dan perhitungan pengunjung real-time menggunakan YOLOv8.",
+      images: ["/images/people-counting.png", "/images/people-counting2.png"],
+      link: "https://github.com/yourproject3",
+      tools: ["Python", "YOLOv8", "OpenCV", "Drone"],
+    },
+    {
+      title: "Data Science Project",
+      description:
+        "Analisis dataset dan visualisasi data untuk insight bisnis menggunakan Python.",
+      images: ["/images/ds.png", "/images/ds2.png"],
+      link: "https://colab.research.google.com/drive/1TFyL_1mSwjUcE6YarY1BC9-e68a8sBGv",
+      tools: ["Python", "Pandas", "Matplotlib", "Jupyter"],
+    },
+    {
+      title: "Peta Dusun Dedel Wetan",
+      description:
+        "Pembuatan peta udara menggunakan drone untuk pemetaan wilayah Dusun Dedel Wetan.",
+      images: ["/images/peta.png", "/images/peta2.png"],
+      link: "https://drive.google.com/file/d/1JvnN1VlHBQZEZmrSqD9_QUHioCWmFgIk/view?usp=sharing",
+      tools: ["Drone", "Pix4D", "GIS"],
+    },
+    {
+      title: "Video Drone Showcase",
+      description: "Kumpulan video hasil aerial shoot menggunakan drone.",
+      images: ["/images/drone.png", "/images/drone2.png"],
+      link: "https://www.youtube.com/playlist?list=PL_Cg8j6TEJU2rvuydnnm2IP5lSH_LTbFB",
+      tools: ["Drone", "Video Editing", "Premiere Pro"],
+    },
+  ];
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setCurrentImage(0);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
+
   return (
     <div className="App">
       <Navbar />
@@ -12,31 +83,41 @@ function App() {
           className="home min-h-screen flex flex-col-reverse md:flex-row justify-center items-center pt-20 bg-[#112240] px-6 md:px-16"
           id="home"
         >
-          <div className="content text-center md:text-left flex-1 max-w-lg mt-8 md:mt-0">
-            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl mb-2">
-              Hi, I'm <span className="text-sky-400">Ridwan Darmawan</span>
+          <div className="content text-center md:text-left flex-1 max-w-2xl mt-8 md:mt-0">
+            <h1 className="text-white font-bold text-4xl sm:text-5xl md:text-6xl leading-tight mb-4">
+              Hi, I'm{" "}
+              <span className="text-sky-400 inline-block whitespace-nowrap">
+                Ridwan Darmawan
+              </span>
             </h1>
-            <h3 className="text-sky-400 text-xl sm:text-2xl mb-4">
+
+            <h3 className="text-sky-400 font-semibold text-xl sm:text-2xl mb-5">
               Junior Developer
             </h3>
-            <p className="text-gray-400 text-base mb-5">
-              I am enthusiastic in technology and have a strong desire to learn.
+
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8 max-w-md md:max-w-lg mx-auto md:mx-0">
+              I'm passionate about technology and love building modern web applications.
+              I’m continuously learning and exploring new things in software development.
             </p>
-            <div className="buttons flex flex-col sm:flex-row justify-center md:justify-start space-y-3 sm:space-y-0 sm:space-x-4 mt-4">
+
+            <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
               <a
                 href="https://drive.google.com/file/d/1K0To7ndkOLm5nRuJXT22p9slye-JWSaf/view?usp=drive_link"
-                className="bg-sky-500 text-white py-2 px-6 rounded-md text-base hover:bg-sky-300 transition"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-sky-500 text-white py-2.5 px-8 rounded-md text-base font-medium hover:bg-sky-400 hover:scale-105 transition-all duration-300 shadow-md"
               >
                 View CV
               </a>
               <a
                 href="#contact"
-                className="border border-sky-500 text-sky-500 py-2 px-6 rounded-md text-base hover:bg-sky-300 hover:text-white transition"
+                className="border border-sky-400 text-sky-400 py-2.5 px-8 rounded-md text-base font-medium hover:bg-sky-400 hover:text-white hover:scale-105 transition-all duration-300 shadow-md"
               >
                 Contact Me
               </a>
             </div>
           </div>
+
 
           <div className="image flex justify-center md:ml-10">
             <img
@@ -49,21 +130,32 @@ function App() {
 
         {/* About Section  */}
         <section
-          className="about min-h-screen flex flex-col justify-center items-center bg-[#112240] px-6 py-20 text-center"
           id="about"
+          className="about min-h-screen flex flex-col justify-center items-center bg-[#0a192f] px-6 py-20"
         >
-          <h2 className="text-white text-3xl sm:text-4xl md:text-5xl mb-6">
-            About Me
-          </h2>
-          <p className="text-gray-400 text-base sm:text-lg md:text-xl max-w-3xl leading-relaxed">
-            I am a graduate of Informatics from UPN "Veteran" Yogyakarta with
-            over a year of experience in web development. I have worked as a
-            freelance web developer, a back-end engineer at Sobat Gurun, and I
-            am currently a web developer at QHomemart Yogyakarta. I am
-            passionate about web development, data science, and machine
-            learning. Additionally, I have experience in drone piloting and have
-            contributed to several mapping projects and video profiles.
-          </p>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-sky-400 font-bold text-3xl sm:text-4xl md:text-5xl mb-8 text-center">
+              About Me
+            </h2>
+
+            <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed text-justify">
+              Saya <span className="text-white font-semibold">Ridwan Darmawan</span>, lulusan
+              <span className="text-sky-400"> S1 Informatika UPN “Veteran” Yogyakarta</span> dengan
+              pengalaman lebih dari 1 tahun sebagai <span className="text-white font-medium">Back End Developer</span>.
+              Saat ini saya bekerja sebagai <span className="text-white font-medium">Full Stack Developer di PT Qhome Sukses Abadi</span>
+              dan telah berhasil mengembangkan serta mengelola berbagai website untuk mendukung kebutuhan perusahaan,
+              menggunakan <span className="text-sky-400">CodeIgniter 3 & 4</span>, <span className="text-sky-400">Express.js</span>,
+              serta tools seperti VS Code, Navicat, phpMyAdmin, MySQL, Postman, Git, dan Docker.
+            </p>
+
+            <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed text-justify mt-6">
+              Selain pengembangan web, saya juga berpengalaman di bidang
+              <span className="text-white font-medium"> IT Support</span>, mulai dari perakitan dan instalasi PC,
+              troubleshooting, crimping kabel LAN, hingga konfigurasi access point.
+              Saya dikenal sebagai pribadi yang cepat belajar, analitis, dan adaptif — dengan semangat untuk menciptakan
+              solusi teknologi yang efisien dan memberikan nilai nyata bagi perusahaan.
+            </p>
+          </div>
         </section>
 
         {/* Skills Section  */}
@@ -149,81 +241,142 @@ function App() {
             <h2 className="text-white text-3xl sm:text-4xl mb-10">
               My Portfolio
             </h2>
+
+            {/* Grid Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "Qlearning",
-                  description: "Web Learning Management System",
-                  image: "/images/qlearning.png",
-                  link: "https://github.com/",
-                },
-                {
-                  title: "Bookshelf API",
-                  description:
-                    "Proyek akhir dari Course Belajar Back-End Pemula dengan Javascript Dicoding yang bertujuan membuat API untuk catatan/notes",
-                  image: "/images/notes.jpg",
-                  link: "https://github.com/kowells/notes-app-back-end",
-                },
-                {
-                  title: "Statistik Pengunjung Perpustakaan",
-                  description:
-                    "Proyek website perhitungan statistik jumlah pengunjung di Grhatama Pustaka, bertujuan untuk menghitung dan menganalisis jumlah pengunjung secara efektif",
-                  image: "/images/perpustakaan.png",
-                  link: "https://github.com/kowells/project-magang",
-                },
-                {
-                  title: "People Counting Using YOLOv8",
-                  description:
-                    "Proyek sistem perhitungan pengunjung yang dikembangkan untuk pusat perbelanjaan, di rancang untuk memantau dan menganalisis jumlah pengunjung secara real-time",
-                  image: "/images/people-counting.png",
-                  link: "https://github.com/yourproject3",
-                },
-                {
-                  title: "Data Science",
-                  description: "Proyek Akhir Course Data Science Sanbercode",
-                  image: "/images/ds.png",
-                  link: "https://colab.research.google.com/drive/1TFyL_1mSwjUcE6YarY1BC9-e68a8sBGv",
-                },
-                {
-                  title: "Peta Dusun Dedel Wetan",
-                  description: "Peta Foto Udara Dusun Dedel Wetan",
-                  image: "/images/peta.png",
-                  link: "https://drive.google.com/file/d/1JvnN1VlHBQZEZmrSqD9_QUHioCWmFgIk/view?usp=sharing",
-                },
-                {
-                  title: "Video Drone",
-                  description: "Video hasil shoot drone",
-                  image: "/images/drone.png",
-                  link: "https://www.youtube.com/playlist?list=PL_Cg8j6TEJU2rvuydnnm2IP5lSH_LTbFB",
-                },
-              ].map((project, index) => (
-                <div
+              {projects.map((project, index) => (
+                <motion.div
                   key={index}
-                  className="bg-[#0a192f] rounded-lg overflow-hidden transform transition hover:scale-105"
+                  className="bg-[#0a192f] rounded-lg overflow-hidden cursor-pointer transform transition hover:scale-105 hover:shadow-lg"
+                  whileHover={{ scale: 1.05 }}
+                  onClick={() => setSelectedProject(project)}
                 >
                   <img
-                    src={project.image}
+                    src={project.images[0]}
                     alt={project.title}
                     className="w-full h-40 object-cover"
                   />
                   <div className="p-6">
                     <h3 className="text-white text-xl mb-2">{project.title}</h3>
-                    <p className="text-gray-400 text-sm mb-4">
+                    <p className="text-gray-400 text-sm mb-3">
                       {project.description}
                     </p>
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap justify-center gap-2 mb-3">
+                      {project.tools.map((tool, i) => (
+                        <span
+                          key={i}
+                          className="text-[#64ffda] border border-[#64ffda] text-xs px-2 py-1 rounded-full"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+
+                    <p className="text-[#64ffda] font-medium">
+                      Click to view more
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Modal with Carousel */}
+          <AnimatePresence>
+            {selectedProject && (
+              <motion.div
+                className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex justify-center items-center z-50 p-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <motion.div
+                  className="bg-[#0a192f] rounded-lg max-w-2xl w-full relative shadow-lg p-6"
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.9, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {/* Tombol Close */}
+                  <button
+                    onClick={closeModal}
+                    className="absolute top-3 right-3 text-gray-400 hover:text-white text-2xl"
+                  >
+                    &times;
+                  </button>
+
+                  {/* Carousel */}
+                  <div className="relative">
+                    <img
+                      src={selectedProject.images[currentImage]}
+                      alt={selectedProject.title}
+                      className="w-full h-64 object-cover rounded-md"
+                    />
+                    {selectedProject.images.length > 1 && (
+                      <>
+                        <button
+                          onClick={() =>
+                            setCurrentImage(
+                              (prev) =>
+                                (prev - 1 + selectedProject.images.length) %
+                                selectedProject.images.length
+                            )
+                          }
+                          className="absolute left-2 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-60 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-90"
+                        >
+                          ‹
+                        </button>
+                        <button
+                          onClick={() =>
+                            setCurrentImage(
+                              (prev) =>
+                                (prev + 1) % selectedProject.images.length
+                            )
+                          }
+                          className="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-60 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-90"
+                        >
+                          ›
+                        </button>
+                      </>
+                    )}
+                  </div>
+
+                  {/* Info Project */}
+                  <div className="mt-6 text-center">
+                    <h3 className="text-white text-2xl mb-3">
+                      {selectedProject.title}
+                    </h3>
+                    <p className="text-gray-400 text-base mb-6">
+                      {selectedProject.description}
+                    </p>
+
+                    {/* Tags di modal juga */}
+                    <div className="flex flex-wrap justify-center gap-2 mb-6">
+                      {selectedProject.tools.map((tool, i) => (
+                        <span
+                          key={i}
+                          className="text-[#64ffda] border border-[#64ffda] text-xs px-2 py-1 rounded-full"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+
                     <a
-                      href={project.link}
+                      href={selectedProject.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block px-4 py-2 border border-[#64ffda] text-[#64ffda] rounded-md hover:bg-[#64ffda] hover:text-[#0a192f] transition"
+                      className="inline-block px-6 py-2 border-2 border-[#64ffda] text-[#64ffda] rounded-lg transition-colors duration-300 hover:bg-[#64ffda] hover:text-[#0a192f]"
                     >
                       View Project
                     </a>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </section>
 
         {/* Contact Section  */}
@@ -281,6 +434,7 @@ function App() {
           </div>
         </section>
       </main>
+
     </div>
   );
 }
