@@ -97,7 +97,7 @@ function App() {
             </motion.h1>
 
             <h3 className="text-[#64ffda] font-semibold text-xl sm:text-2xl mb-5">
-              Junior Developer
+              WEB Developer | IT Support
             </h3>
 
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8 max-w-md md:max-w-lg mx-auto md:mx-0">
