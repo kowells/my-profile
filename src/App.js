@@ -107,7 +107,7 @@ function App() {
 
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
               <a
-                href="https://drive.google.com/file/d/1K0To7ndkOLm5nRuJXT22p9slye-JWSaf/view"
+                href="https://drive.google.com/file/d/1FTqhNPuSkpKznQiH_oM4lUMoiC7e1_p7/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#64ffda] text-[#0a192f] py-2.5 px-8 rounded-md text-base font-medium hover:bg-transparent hover:text-[#64ffda] border border-[#64ffda] transition-all duration-300"
