@@ -280,14 +280,16 @@ function App() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
+                onClick={closeModal} // ✅ klik di luar modal = tutup modal
               >
                 <motion.div
                   className="bg-[#112240] rounded-lg max-w-4xl w-full h-[80vh] relative p-6 flex flex-col items-center justify-between overflow-hidden"
                   initial={{ scale: 0.9 }}
                   animate={{ scale: 1 }}
                   exit={{ scale: 0.9 }}
+                  onClick={(e) => e.stopPropagation()} // 🚫 mencegah klik dalam modal ikut menutup
                 >
-                  {/* Close Button */}
+                  {/* Tombol close */}
                   <button
                     onClick={closeModal}
                     className="absolute top-3 right-3 text-gray-400 hover:text-white text-2xl"
@@ -295,65 +297,31 @@ function App() {
                     &times;
                   </button>
 
-                  {/* Image container */}
-                  <div className="relative flex-1 flex items-center justify-center overflow-hidden">
+                  {/* Image */}
+                  <div className="relative flex-1 flex items-center justify-center overflow-hidden w-full">
                     <img
                       src={selectedProject.images[currentImage]}
                       alt={selectedProject.title}
-                      className="max-w-full max-h-[60vh] object-contain rounded-md transition-all"
+                      className="max-w-full max-h-[60vh] object-contain rounded-md transition-all duration-300"
                     />
-
-                    {/* Left arrow */}
-                    {selectedProject.images.length > 1 && (
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setCurrentImage((prev) =>
-                            prev === 0
-                              ? selectedProject.images.length - 1
-                              : prev - 1
-                          );
-                        }}
-                        className="absolute top-1/2 left-3 transform -translate-y-1/2 bg-[#0a192f]/70 text-white p-2 rounded-full hover:bg-[#64ffda] hover:text-[#0a192f] transition"
-                      >
-                        &#10094;
-                      </button>
-                    )}
-
-                    {/* Right arrow */}
-                    {selectedProject.images.length > 1 && (
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setCurrentImage((prev) =>
-                            prev === selectedProject.images.length - 1
-                              ? 0
-                              : prev + 1
-                          );
-                        }}
-                        className="absolute top-1/2 right-3 transform -translate-y-1/2 bg-[#0a192f]/70 text-white p-2 rounded-full hover:bg-[#64ffda] hover:text-[#0a192f] transition"
-                      >
-                        &#10095;
-                      </button>
-                    )}
                   </div>
 
-                  {/* Image indicator */}
+                  {/* Indicator */}
                   {selectedProject.images.length > 1 && (
                     <div className="flex justify-center gap-2 mt-3 mb-1">
                       {selectedProject.images.map((_, idx) => (
                         <span
                           key={idx}
-                          className={`w-2.5 h-2.5 rounded-full ${idx === currentImage
-                              ? "bg-[#64ffda]"
-                              : "bg-gray-500/50"
-                            }`}
-                        ></span>
-                      ))}
+                className={`w-2.5 h-2.5 rounded-full ${idx === currentImage
+                    ? "bg-[#64ffda]"
+                    : "bg-gray-500/50"
+                  }`}
+              ></span>
+            ))}
                     </div>
                   )}
 
-                  {/* Project Details */}
+                  {/* Deskripsi */}
                   <div className="text-center mt-3">
                     <h3 className="text-2xl mb-2">{selectedProject.title}</h3>
                     <p className="text-gray-400 mb-4 max-w-lg mx-auto">
@@ -368,6 +336,36 @@ function App() {
                       View Project
                     </a>
                   </div>
+
+                  {/* Navigasi kiri/kanan */}
+                  {selectedProject.images.length > 1 && (
+                    <>
+                      <button
+                        onClick={() =>
+                          setCurrentImage((prev) =>
+                            prev === 0
+                              ? selectedProject.images.length - 1
+                              : prev - 1
+                          )
+                        }
+                        className="absolute left-4 top-1/2 -translate-y-1/2 bg-[#0a192f]/70 text-white p-3 rounded-full hover:bg-[#64ffda] hover:text-[#0a192f] transition"
+                      >
+                        &#10094;
+                      </button>
+                      <button
+                        onClick={() =>
+                          setCurrentImage((prev) =>
+                            prev === selectedProject.images.length - 1
+                              ? 0
+                              : prev + 1
+                          )
+                        }
+                        className="absolute right-4 top-1/2 -translate-y-1/2 bg-[#0a192f]/70 text-white p-3 rounded-full hover:bg-[#64ffda] hover:text-[#0a192f] transition"
+                      >
+                        &#10095;
+                      </button>
+                    </>
+                  )}
                 </motion.div>
               </motion.div>
             )}
