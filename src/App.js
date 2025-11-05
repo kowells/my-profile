@@ -9,10 +9,26 @@ function App() {
 
   const projects = [
     {
+      title: "Quality Assurance - HRIS Testing",
+      description:
+        "Testing manual web dan API HRIS.",
+      images: ["/images/test-case.png", "/images/bug-report.png"],
+      link: "https://github.com/",
+      tools: ["Trello", "Postman", "Spreadsheet"],
+    },
+    {
+      title: "HRIS",
+      description:
+        "Web Human Resource untuk data karyawan, perizinan, absensi.",
+      images: ["/images/hris-login.png", "/images/hris-login.png"],
+      link: "https://github.com/",
+      tools: ["Codeigniter 3", "MySQL"],
+    },
+    {
       title: "Qlearning",
       description:
         "Web Learning Management System untuk e-learning interaktif.",
-      images: ["/images/qlearning.png", "/images/qlearning2.png"],
+      images: ["/images/qlearning.png", "/images/qlearning.png"],
       link: "https://github.com/",
       tools: ["Codeigniter 4", "Datatables", "PHP", "MySQL"],
     },
@@ -20,7 +36,7 @@ function App() {
       title: "Bookshelf API",
       description:
         "API sederhana untuk mengelola catatan buku menggunakan Node.js dan Hapi Framework.",
-      images: ["/images/notes.jpg", "/images/notes2.png"],
+      images: ["/images/notes.jpg", "/images/notes.png"],
       link: "https://github.com/kowells/notes-app-back-end",
       tools: ["Node.js", "Hapi", "Jest", "Postman"],
     },
@@ -28,7 +44,7 @@ function App() {
       title: "Statistik Pengunjung Perpustakaan",
       description:
         "Aplikasi untuk menghitung dan menganalisis statistik pengunjung di Grhatama Pustaka.",
-      images: ["/images/perpustakaan.png", "/images/perpustakaan2.png"],
+      images: ["/images/perpustakaan.png", "/images/perpustakaan.png"],
       link: "https://github.com/kowells/project-magang",
       tools: ["PHP", "MySQL"],
     },
@@ -36,7 +52,7 @@ function App() {
       title: "People Counting Using YOLOv8",
       description:
         "Sistem deteksi dan perhitungan pengunjung real-time menggunakan YOLOv8.",
-      images: ["/images/people-counting.png", "/images/people-counting2.png"],
+      images: ["/images/people-counting.png", "/images/people-counting.png"],
       link: "https://github.com/yourproject3",
       tools: ["Python", "YOLOv8", "OpenCV", "Realtime"],
     },
@@ -44,7 +60,7 @@ function App() {
       title: "Data Science Project",
       description:
         "Analisis dataset dan visualisasi data untuk insight bisnis menggunakan Python.",
-      images: ["/images/ds.png", "/images/ds2.png"],
+      images: ["/images/ds.png", "/images/ds.png"],
       link: "https://colab.research.google.com/drive/1TFyL_1mSwjUcE6YarY1BC9-e68a8sBGv",
       tools: ["Python", "Pandas", "Matplotlib", "Jupyter"],
     },
@@ -52,7 +68,7 @@ function App() {
       title: "Peta Dusun Dedel Wetan",
       description:
         "Pembuatan peta udara menggunakan drone untuk pemetaan wilayah Dusun Dedel Wetan.",
-      images: ["/images/peta.png", "/images/peta2.png"],
+      images: ["/images/peta.png"],
       link: "https://drive.google.com/file/d/1JvnN1VlHBQZEZmrSqD9_QUHioCWmFgIk/view?usp=sharing",
       tools: ["Drone", "Pix4D", "GIS"],
     },
@@ -97,12 +113,12 @@ function App() {
             </motion.h1>
 
             <h3 className="text-[#64ffda] font-semibold text-xl sm:text-2xl mb-5">
-              WEB Developer | IT Support
+              WEB Developer | Quality Assurance
             </h3>
 
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8 max-w-md md:max-w-lg mx-auto md:mx-0">
-              Passionate about building modern, efficient web applications and
-              continuously exploring new technologies.
+              Passionate about building modern, efficient web applications and ensuring
+              software quality through structured testing and continuous improvement.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
@@ -165,11 +181,20 @@ function App() {
             </p>
 
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify mt-6">
-              Selain itu, saya memiliki pengalaman sebagai{" "}
+              Selain pengembangan aplikasi, saya juga aktif mendalami bidang{" "}
+              <span className="text-white font-medium">Quality Assurance</span>, khususnya dalam
+              melakukan pengujian fungsional (black box testing), menulis test case,
+              serta memastikan kualitas produk sebelum rilis. Saya memiliki pemahaman
+              tentang <span className="text-[#64ffda]">SDLC</span>, proses bug tracking, dan kolaborasi
+              dengan tim developer untuk mencapai standar kualitas terbaik.
+            </p>
+
+            <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify mt-6">
+              Sebelumnya, saya juga memiliki pengalaman sebagai{" "}
               <span className="text-white font-medium">IT Support</span>, mencakup instalasi PC,
               troubleshooting, crimping kabel LAN, hingga konfigurasi access point.
               Saya dikenal cepat belajar, analitis, dan adaptif dengan semangat tinggi
-              untuk menciptakan solusi teknologi yang efisien.
+              untuk menciptakan solusi teknologi yang efisien dan berkualitas.
             </p>
           </div>
         </section>
@@ -257,38 +282,98 @@ function App() {
                 exit={{ opacity: 0 }}
               >
                 <motion.div
-                  className="bg-[#112240] rounded-lg max-w-2xl w-full relative p-6"
+                  className="bg-[#112240] rounded-lg max-w-4xl w-full h-[80vh] relative p-6 flex flex-col items-center justify-between overflow-hidden"
                   initial={{ scale: 0.9 }}
                   animate={{ scale: 1 }}
                   exit={{ scale: 0.9 }}
                 >
+                  {/* Close Button */}
                   <button
                     onClick={closeModal}
                     className="absolute top-3 right-3 text-gray-400 hover:text-white text-2xl"
                   >
                     &times;
                   </button>
-                  <img
-                    src={selectedProject.images[currentImage]}
-                    alt={selectedProject.title}
-                    className="w-full h-64 object-cover rounded-md mb-4"
-                  />
-                  <h3 className="text-2xl mb-3">{selectedProject.title}</h3>
-                  <p className="text-gray-400 mb-4">
-                    {selectedProject.description}
-                  </p>
-                  <a
-                    href={selectedProject.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="border-2 border-[#64ffda] text-[#64ffda] px-5 py-2 rounded hover:bg-[#64ffda] hover:text-[#0a192f] transition"
-                  >
-                    View Project
-                  </a>
+
+                  {/* Image container */}
+                  <div className="relative flex-1 flex items-center justify-center overflow-hidden">
+                    <img
+                      src={selectedProject.images[currentImage]}
+                      alt={selectedProject.title}
+                      className="max-w-full max-h-[60vh] object-contain rounded-md transition-all"
+                    />
+
+                    {/* Left arrow */}
+                    {selectedProject.images.length > 1 && (
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setCurrentImage((prev) =>
+                            prev === 0
+                              ? selectedProject.images.length - 1
+                              : prev - 1
+                          );
+                        }}
+                        className="absolute top-1/2 left-3 transform -translate-y-1/2 bg-[#0a192f]/70 text-white p-2 rounded-full hover:bg-[#64ffda] hover:text-[#0a192f] transition"
+                      >
+                        &#10094;
+                      </button>
+                    )}
+
+                    {/* Right arrow */}
+                    {selectedProject.images.length > 1 && (
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setCurrentImage((prev) =>
+                            prev === selectedProject.images.length - 1
+                              ? 0
+                              : prev + 1
+                          );
+                        }}
+                        className="absolute top-1/2 right-3 transform -translate-y-1/2 bg-[#0a192f]/70 text-white p-2 rounded-full hover:bg-[#64ffda] hover:text-[#0a192f] transition"
+                      >
+                        &#10095;
+                      </button>
+                    )}
+                  </div>
+
+                  {/* Image indicator */}
+                  {selectedProject.images.length > 1 && (
+                    <div className="flex justify-center gap-2 mt-3 mb-1">
+                      {selectedProject.images.map((_, idx) => (
+                        <span
+                          key={idx}
+                          className={`w-2.5 h-2.5 rounded-full ${idx === currentImage
+                              ? "bg-[#64ffda]"
+                              : "bg-gray-500/50"
+                            }`}
+                        ></span>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Project Details */}
+                  <div className="text-center mt-3">
+                    <h3 className="text-2xl mb-2">{selectedProject.title}</h3>
+                    <p className="text-gray-400 mb-4 max-w-lg mx-auto">
+                      {selectedProject.description}
+                    </p>
+                    <a
+                      href={selectedProject.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border-2 border-[#64ffda] text-[#64ffda] px-5 py-2 rounded hover:bg-[#64ffda] hover:text-[#0a192f] transition"
+                    >
+                      View Project
+                    </a>
+                  </div>
                 </motion.div>
               </motion.div>
             )}
           </AnimatePresence>
+
+
         </section>
 
         {/* ===== CONTACT SECTION ===== */}
