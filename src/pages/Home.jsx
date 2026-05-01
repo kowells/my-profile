@@ -21,7 +21,7 @@ export default function Home() {
             description:
                 "Web Human Resource untuk data karyawan, perizinan, absensi.",
             images: ["/images/hris-login.png", "/images/hris-login.png"],
-            link: "https://github.com/",
+            link: "/private",
             tools: ["Codeigniter 3", "MySQL"],
         },
         {
@@ -29,7 +29,7 @@ export default function Home() {
             description:
                 "Web Learning Management System untuk e-learning interaktif.",
             images: ["/images/qlearning.png", "/images/qlearning.png"],
-            link: "https://github.com/",
+            link: "/private",
             tools: ["Codeigniter 4", "Datatables", "PHP", "MySQL"],
         },
         {
