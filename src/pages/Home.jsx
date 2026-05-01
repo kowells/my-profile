@@ -9,11 +9,11 @@ export default function Home() {
 
     const projects = [
         {
-            title: "Quality Assurance - HRIS Testing",
+            title: "HRIS Manual Testing - Cuti",
             description:
                 "Testing manual web dan API HRIS.",
             images: ["/images/test-case.png", "/images/bug-report.png"],
-            link: "https://github.com/",
+            link: "https://drive.google.com/file/d/1PyMUO3ndtIHSiUjH58SKKeM6ymCmAync/view?usp=sharing",
             tools: ["Trello", "Postman", "Spreadsheet"],
         },
         {
@@ -46,7 +46,7 @@ export default function Home() {
             description:
                 "Sistem deteksi dan perhitungan pengunjung real-time menggunakan YOLOv8.",
             images: ["/images/people-counting.png", "/images/people-counting.png"],
-            link: "https://github.com/yourproject3",
+            link: "/private",
             tools: ["Python", "YOLOv8", "OpenCV", "Realtime"],
         },
 
