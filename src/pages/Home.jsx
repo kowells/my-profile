@@ -9,7 +9,15 @@ export default function Home() {
 
     const projects = [
         {
-            title: "HRIS Manual Testing - Cuti",
+            title: "Realbugz - Testing",
+            description:
+                "Testing form web manual dan automation menggunakan Playwright.",
+            images: ["/images/realbugz-1.png", "/images/realbugz-2.png"],
+            link: "https://github.com/kowells/realbugz-testing",
+            tools: ["Playwright", "Spreadsheet", "Trello"],
+        },
+        {
+            title: "HRIS Cuti - Testing",
             description:
                 "Testing manual web dan API HRIS.",
             images: ["/images/test-case.png", "/images/bug-report.png"],
