@@ -17,6 +17,14 @@ export default function Home() {
             tools: ["Playwright", "Spreadsheet", "Trello"],
         },
         {
+            title: "Fake Store API  - Testing",
+            description:
+                "Testing API menggunakan Postman.",
+            images: ["/images/fakestoreapi-1.png"],
+            link: "https://github.com/kowells/fakestoreapi-testing",
+            tools: ["Postman", "Spreadsheet", "Trello"],
+        },
+        {
             title: "HRIS Cuti - Testing",
             description:
                 "Testing manual web dan API HRIS.",
