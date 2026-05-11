@@ -124,12 +124,36 @@ export default function Home() {
                     </motion.h1>
 
                     <h3 className="text-[#64ffda] font-semibold text-xl sm:text-2xl mb-5">
-                        Project Manager | Quality Assurance
+                        Quality Assurance
                     </h3>
 
                     <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8 max-w-md md:max-w-lg mx-auto md:mx-0">
-                        Focused on leading projects, improving workflows,
-                        and ensuring high-quality software through structured testing, clear communication, and continuous improvement.
+                        QA Engineer focused on system quality, release stability, and user validation for web & mobile applications.
+                        Experienced in manual testing, API validation, and cross-team project coordination.
+                    </p>
+
+                    <p className="flex items-center justify-center md:justify-start gap-2 text-gray-300 mb-6">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={1.5}
+                            stroke="currentColor"
+                            className="w-5 h-5 text-[#64ffda]"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M12 21s7-4.35 7-11a7 7 0 10-14 0c0 6.65 7 11 7 11z"
+                            />
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M12 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z"
+                            />
+                        </svg>
+
+                        <span>Sleman, Yogyakarta</span>
                     </p>
 
                     <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
@@ -146,6 +170,12 @@ export default function Home() {
                             className="border border-[#64ffda] text-[#64ffda] py-2.5 px-8 rounded-md text-base font-medium hover:bg-[#64ffda] hover:text-[#0a192f] transition-all duration-300"
                         >
                             Contact Me
+                        </a>
+                        <a
+                            href="#project"
+                            className="border border-[#64ffda] text-[#64ffda] py-2.5 px-8 rounded-md text-base font-medium hover:bg-[#64ffda] hover:text-[#0a192f] transition-all duration-300"
+                        >
+                            Project
                         </a>
                     </div>
                 </div>
@@ -172,50 +202,156 @@ export default function Home() {
             >
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-center relative">
-                        About Me
+                        Tentang Saya
                         <span className="block w-20 h-[3px] bg-[#64ffda] mx-auto mt-3 rounded"></span>
                     </h2>
-
                     <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify">
-                        Saya <span className="text-white font-semibold">Ridwan Darmawan</span>,
-                        lulusan <span className="text-[#64ffda]">S1 Informatika UPN “Veteran” Yogyakarta</span>
-                        dengan pengalaman di bidang pengembangan perangkat lunak dan pengujian sistem.
-                        Saat ini saya berfokus sebagai
-                        <span className="text-white font-medium"> Project Manager dan Quality Assurance</span>,
-                        dengan peran dalam mengelola alur proyek, memastikan komunikasi tim berjalan efektif,
-                        serta memastikan setiap produk yang dikembangkan memenuhi standar kualitas yang tinggi.
+                        Saya percaya kualitas aplikasi bukan hanya tentang fitur berjalan,
+                        tetapi juga tentang bagaimana sistem tetap stabil, minim kendala,
+                        dan nyaman digunakan oleh user. Karena itu, saya terbiasa melakukan
+                        <span className="text-[#64ffda]"> manual testing</span>,
+                        <span className="text-[#64ffda]"> automation testing</span>,
+                        <span className="text-[#64ffda]"> regression testing</span>,
+                        <span className="text-[#64ffda]"> UAT</span>,
+                        <span className="text-[#64ffda]"> bug reporting</span>, dan
+                        <span className="text-[#64ffda]"> system validation</span>
+                        untuk memastikan setiap release benar-benar siap digunakan.
                     </p>
 
                     <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify mt-6">
-                        Saya memiliki pengalaman dalam <span className="text-white font-medium">Quality Assurance</span>,
-                        termasuk melakukan pengujian manual (black box testing), menyusun test case,
-                        serta melakukan API dan end-to-end testing menggunakan
-                        <span className="text-[#64ffda]"> Postman</span> dan
-                        <span className="text-[#64ffda]"> Playwright</span>.
-                        Saya juga terbiasa bekerja dengan proses <span className="text-[#64ffda]">SDLC</span>,
-                        bug tracking, serta kolaborasi lintas tim untuk memastikan kualitas produk sebelum rilis.
+                        Selama lebih dari
+                        <span className="text-white font-medium"> 1,5 tahun</span>,
+                        saya terlibat dalam pengembangan dan pengujian aplikasi web maupun mobile,
+                        termasuk sistem HR dan berbagai aplikasi internal perusahaan.
+                        Saya sering menangani masalah seperti bug setelah deployment,
+                        alur fitur yang tidak sesuai kebutuhan user,
+                        hingga integrasi sistem yang kurang stabil.
+                        Untuk mengatasinya, saya terbiasa menyusun
+                        <span className="text-[#64ffda]"> test case</span>,
+                        melakukan
+                        <span className="text-[#64ffda]"> validasi API</span>,
+                        membuat
+                        <span className="text-[#64ffda]"> dokumentasi bug</span>,
+                        serta melakukan
+                        <span className="text-[#64ffda]"> end-to-end testing</span>
+                        agar proses testing lebih terstruktur dan mudah ditindaklanjuti oleh tim developer.
                     </p>
 
                     <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify mt-6">
-                        Selain itu, saya memiliki pemahaman teknis di bidang pengembangan web menggunakan
-                        <span className="text-[#64ffda]"> JavaScript</span>,
-                        <span className="text-[#64ffda]"> Node.js</span>, dan
-                        <span className="text-[#64ffda]"> MySQL</span>,
-                        yang membantu saya dalam berkomunikasi secara efektif dengan tim developer
-                        dan mengambil keputusan berbasis teknis sebagai Project Manager.
+                        Didukung pengalaman sebagai
+                        <span className="text-white font-medium"> Full Stack Web Developer</span>,
+                        saya memiliki pemahaman yang baik terhadap alur aplikasi,
+                        database, dan integrasi sistem sehingga lebih mudah
+                        dalam menganalisis masalah dari sisi teknis maupun pengalaman pengguna.
+                        Saya juga terbiasa berkolaborasi dengan developer,
+                        user, dan stakeholder untuk memastikan setiap fitur
+                        berjalan sesuai kebutuhan bisnis dan memiliki kualitas
+                        yang layak sebelum release.
                     </p>
 
-                    <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify mt-6">
-                        Sebelumnya, saya juga memiliki pengalaman sebagai
-                        <span className="text-white font-medium"> IT Support</span>,
-                        yang membentuk kemampuan saya dalam troubleshooting, problem solving,
-                        serta adaptasi cepat terhadap berbagai permasalahan teknis.
-                        Saya dikenal sebagai individu yang analitis, komunikatif, dan berorientasi pada hasil,
-                        dengan komitmen untuk memastikan setiap proyek berjalan terstruktur dan menghasilkan
-                        solusi yang berkualitas.
-                    </p>
+                </div>
+            </section>
 
+            {/* ===== QA CONTRIBUTION SECTION ===== */}
+            <section
+                id="qa-contribution"
+                className="bg-[#112240] py-20 px-6"
+            >
+                <div className="max-w-6xl mx-auto">
+                    {/* TITLE */}
+                    <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16">
+                        QA Contribution
+                    </h2>
 
+                    {/* GRID */}
+                    <div className="grid md:grid-cols-2 gap-8">
+
+                        {/* CARD 1 */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: true }}
+                            className="bg-[#0a192f] p-8 rounded-2xl border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all shadow-lg hover:shadow-[#64ffda]/10"
+                        >
+                            <div className="text-[#64ffda] text-4xl mb-5">🛡️</div>
+
+                            <h3 className="text-white text-2xl font-semibold mb-4">
+                                Release Stability & Regression Testing
+                            </h3>
+
+                            <p className="text-gray-300 leading-relaxed text-lg">
+                                Melakukan regression testing dan validasi fitur sebelum deployment
+                                untuk membantu meminimalkan bug setelah release serta menjaga
+                                stabilitas aplikasi web dan mobile saat digunakan user.
+                            </p>
+                        </motion.div>
+
+                        {/* CARD 2 */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                            viewport={{ once: true }}
+                            className="bg-[#0a192f] p-8 rounded-2xl border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all shadow-lg hover:shadow-[#64ffda]/10"
+                        >
+                            <div className="text-[#64ffda] text-4xl mb-5">📋</div>
+
+                            <h3 className="text-white text-2xl font-semibold mb-4">
+                                Structured Bug Reporting & Faster Validation
+                            </h3>
+
+                            <p className="text-gray-300 leading-relaxed text-lg">
+                                Menyusun checklist testing, dokumentasi bug, dan laporan validasi
+                                yang membantu developer mempercepat proses tracking issue,
+                                retesting, dan perbaikan fitur sebelum release.
+                            </p>
+                        </motion.div>
+
+                        {/* CARD 3 */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            viewport={{ once: true }}
+                            className="bg-[#0a192f] p-8 rounded-2xl border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all shadow-lg hover:shadow-[#64ffda]/10"
+                        >
+                            <div className="text-[#64ffda] text-4xl mb-5">🔗</div>
+
+                            <h3 className="text-white text-2xl font-semibold mb-4">
+                                API & System Integration Validation
+                            </h3>
+
+                            <p className="text-gray-300 leading-relaxed text-lg">
+                                Melakukan pengujian API dan validasi integrasi Front-End,
+                                Back-End, serta Database menggunakan Postman dan Hoppscotch
+                                untuk memastikan sinkronisasi data berjalan akurat dan konsisten.
+                            </p>
+                        </motion.div>
+
+                        {/* CARD 4 */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
+                            viewport={{ once: true }}
+                            className="bg-[#0a192f] p-8 rounded-2xl border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all shadow-lg hover:shadow-[#64ffda]/10"
+                        >
+                            <div className="text-[#64ffda] text-4xl mb-5">👥</div>
+
+                            <h3 className="text-white text-2xl font-semibold mb-4">
+                                HR System & User Workflow Validation
+                            </h3>
+
+                            <p className="text-gray-300 leading-relaxed text-lg">
+                                Melakukan pengujian sistem HR dan berbagai aplikasi internal
+                                bersama user dan tim lintas divisi untuk memastikan workflow,
+                                approval, dan fitur operasional berjalan sesuai kebutuhan bisnis
+                                dan minim revisi setelah implementasi.
+                            </p>
+                        </motion.div>
+
+                    </div>
                 </div>
             </section>
 
@@ -259,10 +395,10 @@ export default function Home() {
 
 
             {/* ===== PORTFOLIO SECTION ===== */}
-            <section id="portfolio" className="bg-[#0a192f] py-20 px-6 text-center">
+            <section id="project" className="bg-[#0a192f] py-20 px-6 text-center">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold mb-12">
-                        My Portfolio
+                        Project
                     </h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
