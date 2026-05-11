@@ -17,6 +17,14 @@ export default function Home() {
             tools: ["Playwright", "Spreadsheet", "Trello"],
         },
         {
+            title: "SINKAL Publik - Testing",
+            description:
+                "Testing web manual dan automation menggunakan Playwright.",
+            images: ["/images/sinkal1.png", "/images/sinkal3.png", "/images/sinkal2.png"],
+            link: "https://github.com/kowells/sinkal-publik-testing",
+            tools: ["Playwright", "Spreadsheet", "Open Project"],
+        },
+        {
             title: "Fake Store API  - Testing",
             description:
                 "Testing API menggunakan Postman.",
@@ -40,31 +48,31 @@ export default function Home() {
             link: "/private",
             tools: ["Codeigniter 3", "MySQL"],
         },
-        {
-            title: "Qlearning",
-            description:
-                "Web Learning Management System untuk e-learning interaktif.",
-            images: ["/images/qlearning.png", "/images/qlearning.png"],
-            link: "/private",
-            tools: ["Codeigniter 4", "Datatables", "PHP", "MySQL"],
-        },
-        {
-            title: "Bookshelf API",
-            description:
-                "API sederhana untuk mengelola catatan buku menggunakan Node.js dan Hapi Framework.",
-            images: ["/images/notes.jpg", "/images/notes.png"],
-            link: "https://github.com/kowells/notes-app-back-end",
-            tools: ["Node.js", "Hapi", "Jest", "Postman"],
-        },
+        // {
+        //     title: "Qlearning",
+        //     description:
+        //         "Web Learning Management System untuk e-learning interaktif.",
+        //     images: ["/images/qlearning.png", "/images/qlearning.png"],
+        //     link: "/private",
+        //     tools: ["Codeigniter 4", "Datatables", "PHP", "MySQL"],
+        // },
+        // {
+        //     title: "Bookshelf API",
+        //     description:
+        //         "API sederhana untuk mengelola catatan buku menggunakan Node.js dan Hapi Framework.",
+        //     images: ["/images/notes.jpg", "/images/notes.png"],
+        //     link: "https://github.com/kowells/notes-app-back-end",
+        //     tools: ["Node.js", "Hapi", "Jest", "Postman"],
+        // },
 
-        {
-            title: "People Counting Using YOLOv8",
-            description:
-                "Sistem deteksi dan perhitungan pengunjung real-time menggunakan YOLOv8.",
-            images: ["/images/people-counting.png", "/images/people-counting.png"],
-            link: "/private",
-            tools: ["Python", "YOLOv8", "OpenCV", "Realtime"],
-        },
+        // {
+        //     title: "People Counting Using YOLOv8",
+        //     description:
+        //         "Sistem deteksi dan perhitungan pengunjung real-time menggunakan YOLOv8.",
+        //     images: ["/images/people-counting.png", "/images/people-counting.png"],
+        //     link: "/private",
+        //     tools: ["Python", "YOLOv8", "OpenCV", "Realtime"],
+        // },
 
     ];
 
