@@ -166,7 +166,7 @@ export default function Home() {
 
                     <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
                         <a
-                            href="https://drive.google.com/file/d/1FTqhNPuSkpKznQiH_oM4lUMoiC7e1_p7/view"
+                            href="https://drive.google.com/file/d/1UWC_EFGSnY5drsqe_6shjRuSlS-yy2Sy/view?usp=sharing/view"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-[#64ffda] text-[#0a192f] py-2.5 px-8 rounded-md text-base font-medium hover:bg-transparent hover:text-[#64ffda] border border-[#64ffda] transition-all duration-300"
@@ -210,10 +210,10 @@ export default function Home() {
             >
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-center relative">
-                        Tentang Saya
+                        About Me
                         <span className="block w-20 h-[3px] bg-[#64ffda] mx-auto mt-3 rounded"></span>
                     </h2>
-                    <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify">
+                    {/* <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify">
                         Saya percaya kualitas aplikasi bukan hanya tentang fitur berjalan,
                         tetapi juga tentang bagaimana sistem tetap stabil, minim kendala,
                         dan nyaman digunakan oleh user. Karena itu, saya terbiasa melakukan
@@ -241,7 +241,7 @@ export default function Home() {
                         membuat
                         <span className="text-[#64ffda]"> dokumentasi bug</span>,
                         serta melakukan
-                        <span className="text-[#64ffda]"> end-to-end testing</span>
+                        <span className="text-[#64ffda]"> end-to-end testing </span>
                         agar proses testing lebih terstruktur dan mudah ditindaklanjuti oleh tim developer.
                     </p>
 
@@ -255,6 +255,49 @@ export default function Home() {
                         user, dan stakeholder untuk memastikan setiap fitur
                         berjalan sesuai kebutuhan bisnis dan memiliki kualitas
                         yang layak sebelum release.
+                    </p> */}
+
+                    <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify">
+                        I believe application quality is not only about features working properly,
+                        but also about how the system remains stable, minimizes issues,
+                        and provides a smooth experience for users. Therefore, I am experienced in
+                        <span className="text-[#64ffda]"> manual testing</span>,
+                        <span className="text-[#64ffda]"> automation testing</span>,
+                        <span className="text-[#64ffda]"> regression testing</span>,
+                        <span className="text-[#64ffda]"> UAT</span>,
+                        <span className="text-[#64ffda]"> bug reporting</span>, and
+                        <span className="text-[#64ffda]"> system validation</span>
+                        to ensure every release is truly ready for production use.
+                    </p>
+
+                    <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify mt-6">
+                        For more than
+                        <span className="text-white font-medium"> 1.5 years</span>,
+                        I have been involved in the development and testing of both web and mobile applications,
+                        including HR systems and various internal company applications.
+                        I frequently handle issues such as post-deployment bugs,
+                        feature workflows that do not align with user requirements,
+                        and unstable system integrations.
+                        To address these challenges, I am accustomed to creating
+                        <span className="text-[#64ffda]"> test cases</span>,
+                        performing
+                        <span className="text-[#64ffda]"> API validation</span>,
+                        preparing
+                        <span className="text-[#64ffda]"> bug documentation</span>, and conducting
+                        <span className="text-[#64ffda]"> end-to-end testing</span>
+                        to make the testing process more structured and easier for the development team to follow up.
+                    </p>
+
+                    <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify mt-6">
+                        Supported by my experience as a
+                        <span className="text-white font-medium"> Full Stack Web Developer</span>,
+                        I have a strong understanding of application workflows,
+                        databases, and system integrations, which helps me analyze issues
+                        from both technical and user experience perspectives.
+                        I am also accustomed to collaborating with developers,
+                        users, and stakeholders to ensure every feature
+                        meets business requirements and achieves the expected quality
+                        before release.
                     </p>
 
                 </div>
@@ -272,6 +315,7 @@ export default function Home() {
                     </h2>
 
                     {/* GRID */}
+
                     <div className="grid md:grid-cols-2 gap-8">
 
                         {/* CARD 1 */}
@@ -289,9 +333,9 @@ export default function Home() {
                             </h3>
 
                             <p className="text-gray-300 leading-relaxed text-lg">
-                                Melakukan regression testing dan validasi fitur sebelum deployment
-                                untuk membantu meminimalkan bug setelah release serta menjaga
-                                stabilitas aplikasi web dan mobile saat digunakan user.
+                                Conducting regression testing and feature validation before deployment
+                                to help minimize post-release bugs and maintain the stability
+                                of web and mobile applications during user operations.
                             </p>
                         </motion.div>
 
@@ -310,9 +354,9 @@ export default function Home() {
                             </h3>
 
                             <p className="text-gray-300 leading-relaxed text-lg">
-                                Menyusun checklist testing, dokumentasi bug, dan laporan validasi
-                                yang membantu developer mempercepat proses tracking issue,
-                                retesting, dan perbaikan fitur sebelum release.
+                                Creating testing checklists, bug documentation, and validation reports
+                                that help developers accelerate issue tracking,
+                                retesting, and feature fixes before release.
                             </p>
                         </motion.div>
 
@@ -331,9 +375,9 @@ export default function Home() {
                             </h3>
 
                             <p className="text-gray-300 leading-relaxed text-lg">
-                                Melakukan pengujian API dan validasi integrasi Front-End,
-                                Back-End, serta Database menggunakan Postman dan Hoppscotch
-                                untuk memastikan sinkronisasi data berjalan akurat dan konsisten.
+                                Performing API testing and validating Front-End,
+                                Back-End, and Database integrations using Postman and Hoppscotch
+                                to ensure accurate and consistent data synchronization.
                             </p>
                         </motion.div>
 
@@ -352,14 +396,17 @@ export default function Home() {
                             </h3>
 
                             <p className="text-gray-300 leading-relaxed text-lg">
-                                Melakukan pengujian sistem HR dan berbagai aplikasi internal
-                                bersama user dan tim lintas divisi untuk memastikan workflow,
-                                approval, dan fitur operasional berjalan sesuai kebutuhan bisnis
-                                dan minim revisi setelah implementasi.
+                                Conducting testing for HR systems and various internal applications
+                                together with users and cross-functional teams to ensure workflows,
+                                approval processes, and operational features align with business requirements
+                                and require minimal revisions after implementation.
                             </p>
                         </motion.div>
 
                     </div>
+
+
+
                 </div>
             </section>
 
