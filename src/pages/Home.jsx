@@ -9,33 +9,33 @@ export default function Home() {
 
     const projects = [
         {
-            title: "Realbugz - Testing",
+            title: "Realbugz",
             description:
-                "Testing form web manual dan automation menggunakan Playwright.",
+                "Performed manual and automated testing using Playwright, created test scenarios, executed regression testing, and documented defects before release.",
             images: ["/images/realbugz-1.png", "/images/realbugz-2.png"],
             link: "https://github.com/kowells/realbugz-testing",
             tools: ["Playwright", "Spreadsheet", "Trello"],
         },
         {
-            title: "SINKAL Publik - Testing",
+            title: "SINKAL Public Portal",
             description:
-                "Testing web manual dan automation menggunakan Playwright.",
+                "Executed manual and automated testing for a government information system, validating public workflows, forms, and critical user journeys before deployment.",
             images: ["/images/sinkal1.png", "/images/sinkal3.png", "/images/sinkal2.png"],
             link: "https://github.com/kowells/sinkal-publik-testing",
             tools: ["Playwright", "Spreadsheet", "Open Project"],
         },
         {
-            title: "Fake Store API  - Testing",
+            title: "Fake Store REST API",
             description:
-                "Testing API menggunakan Postman.",
+                "Designed API test cases and validated REST endpoints using Postman, including authentication, CRUD operations, response validation, and error handling.",
             images: ["/images/fakestoreapi-1.png"],
             link: "https://github.com/kowells/fakestoreapi-testing",
             tools: ["Postman", "Spreadsheet", "Trello"],
         },
         {
-            title: "HRIS Cuti - Testing",
+            title: "HRIS Leave Management",
             description:
-                "Testing manual web dan API HRIS.",
+                "Designed test cases, validated leave approval workflows, executed API testing, and documented bug reports for HRIS leave management features.",
             images: ["/images/test-case.png", "/images/bug-report.png"],
             link: "https://drive.google.com/file/d/1PyMUO3ndtIHSiUjH58SKKeM6ymCmAync/view?usp=sharing",
             tools: ["Trello", "Postman", "Spreadsheet"],
@@ -43,7 +43,7 @@ export default function Home() {
         {
             title: "HRIS",
             description:
-                "Web Human Resource untuk data karyawan, perizinan, absensi.",
+                "Human Resource Information System supporting attendance, leave, employee management, and approval workflows with end-to-end validation.",
             images: ["/images/hris-login.png", "/images/hris-login.png"],
             link: "/private",
             tools: ["Codeigniter 3", "MySQL"],
@@ -136,8 +136,9 @@ export default function Home() {
                     </h3>
 
                     <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8 max-w-md md:max-w-lg mx-auto md:mx-0">
-                        QA Engineer focused on system quality, release stability, and user validation for web & mobile applications.
-                        Experienced in manual testing, API validation, and cross-team project coordination.
+                        QA Engineer with nearly 2 years of experience ensuring web and mobile applications are stable, reliable, and ready for production.
+                        Experienced in test planning, API validation, regression testing, and investigating complex business workflows.
+                        Supported by a strong software development background, allowing me to identify issues from both technical and user perspectives.
                     </p>
 
                     <p className="flex items-center justify-center md:justify-start gap-2 text-gray-300 mb-6">
@@ -171,20 +172,21 @@ export default function Home() {
                             rel="noopener noreferrer"
                             className="bg-[#64ffda] text-[#0a192f] py-2.5 px-8 rounded-md text-base font-medium hover:bg-transparent hover:text-[#64ffda] border border-[#64ffda] transition-all duration-300"
                         >
-                            View CV
-                        </a>
-                        <a
-                            href="#contact"
-                            className="border border-[#64ffda] text-[#64ffda] py-2.5 px-8 rounded-md text-base font-medium hover:bg-[#64ffda] hover:text-[#0a192f] transition-all duration-300"
-                        >
-                            Contact Me
+                            Download CV
                         </a>
                         <a
                             href="#project"
                             className="border border-[#64ffda] text-[#64ffda] py-2.5 px-8 rounded-md text-base font-medium hover:bg-[#64ffda] hover:text-[#0a192f] transition-all duration-300"
                         >
-                            Project
+                            View My Work
                         </a>
+                        <a
+                            href="#contact"
+                            className="border border-[#64ffda] text-[#64ffda] py-2.5 px-8 rounded-md text-base font-medium hover:bg-[#64ffda] hover:text-[#0a192f] transition-all duration-300"
+                        >
+                            Let's Connect
+                        </a>
+
                     </div>
                 </div>
 
@@ -203,257 +205,415 @@ export default function Home() {
                 </motion.div>
             </section>
 
+            {/* ===== QA HIGHLIGHTS SECTION ===== */}
+            <section
+                id="qa-highlight"
+                className="bg-[#0a192f] py-20 px-6"
+            >
+                <div className="max-w-6xl mx-auto">
+
+                    {/* TITLE */}
+                    <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16">
+                        QA Highlights
+                    </h2>
+
+                    {/* HIGHLIGHT CARDS */}
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+
+                        <div className="bg-[#112240] rounded-2xl p-8 text-center border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all">
+                            <h3 className="text-[#64ffda] text-5xl font-bold mb-3">2</h3>
+                            <p className="text-gray-300 text-lg">
+                                Years of Experience
+                            </p>
+                        </div>
+
+                        <div className="bg-[#112240] rounded-2xl p-8 text-center border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all">
+                            <h3 className="text-[#64ffda] text-5xl font-bold mb-3">10+</h3>
+                            <p className="text-gray-300 text-lg">
+                                Production Releases
+                            </p>
+                        </div>
+
+                        <div className="bg-[#112240] rounded-2xl p-8 text-center border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all">
+                            <h3 className="text-[#64ffda] text-5xl font-bold mb-3">100+</h3>
+                            <p className="text-gray-300 text-lg">
+                                Test Cases Designed
+                            </p>
+                        </div>
+
+                        <div className="bg-[#112240] rounded-2xl p-8 text-center border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all">
+                            <h3 className="text-[#64ffda] text-5xl font-bold mb-3">45+</h3>
+                            <p className="text-gray-300 text-lg">
+                                REST APIs Validated
+                            </p>
+                        </div>
+
+                        <div className="bg-[#112240] rounded-2xl p-8 text-center border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all">
+                            <h3 className="text-[#64ffda] text-5xl font-bold mb-3">15+</h3>
+                            <p className="text-gray-300 text-lg">
+                                Critical Bugs Found
+                            </p>
+                        </div>
+
+                        <div className="bg-[#112240] rounded-2xl p-8 text-center border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all">
+                            <h3 className="text-[#64ffda] text-5xl font-bold mb-3">3</h3>
+                            <p className="text-gray-300 text-lg">
+                                Business Systems
+                            </p>
+                        </div>
+
+                    </div>
+
+                    {/* DESCRIPTION */}
+                    <p className="max-w-4xl mx-auto mt-14 text-center text-gray-300 text-lg leading-relaxed">
+                        Experienced in validating <span className="text-white font-medium">HRIS</span>,
+                        <span className="text-white font-medium"> Learning Management Systems</span>,
+                        <span className="text-white font-medium"> Government Information Systems</span>,
+                        and <span className="text-white font-medium">Internal Business Applications</span>.
+                    </p>
+
+                </div>
+            </section>
+
             {/* ===== ABOUT SECTION ===== */}
             <section
                 id="about"
-                className="min-h-screen flex flex-col justify-center items-center bg-[#0a192f] px-6 py-20"
+                className="min-h-screen flex flex-col justify-center items-center bg-[#112240] px-6 py-20"
             >
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-center relative">
                         About Me
                         <span className="block w-20 h-[3px] bg-[#64ffda] mx-auto mt-3 rounded"></span>
                     </h2>
-                    {/* <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify">
-                        Saya percaya kualitas aplikasi bukan hanya tentang fitur berjalan,
-                        tetapi juga tentang bagaimana sistem tetap stabil, minim kendala,
-                        dan nyaman digunakan oleh user. Karena itu, saya terbiasa melakukan
-                        <span className="text-[#64ffda]"> manual testing</span>,
-                        <span className="text-[#64ffda]"> automation testing</span>,
-                        <span className="text-[#64ffda]"> regression testing</span>,
-                        <span className="text-[#64ffda]"> UAT</span>,
-                        <span className="text-[#64ffda]"> bug reporting</span>, dan
-                        <span className="text-[#64ffda]"> system validation</span>
-                        untuk memastikan setiap release benar-benar siap digunakan.
-                    </p>
-
-                    <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify mt-6">
-                        Selama lebih dari
-                        <span className="text-white font-medium"> 1,5 tahun</span>,
-                        saya terlibat dalam pengembangan dan pengujian aplikasi web maupun mobile,
-                        termasuk sistem HR dan berbagai aplikasi internal perusahaan.
-                        Saya sering menangani masalah seperti bug setelah deployment,
-                        alur fitur yang tidak sesuai kebutuhan user,
-                        hingga integrasi sistem yang kurang stabil.
-                        Untuk mengatasinya, saya terbiasa menyusun
-                        <span className="text-[#64ffda]"> test case</span>,
-                        melakukan
-                        <span className="text-[#64ffda]"> validasi API</span>,
-                        membuat
-                        <span className="text-[#64ffda]"> dokumentasi bug</span>,
-                        serta melakukan
-                        <span className="text-[#64ffda]"> end-to-end testing </span>
-                        agar proses testing lebih terstruktur dan mudah ditindaklanjuti oleh tim developer.
-                    </p>
-
-                    <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify mt-6">
-                        Didukung pengalaman sebagai
-                        <span className="text-white font-medium"> Full Stack Web Developer</span>,
-                        saya memiliki pemahaman yang baik terhadap alur aplikasi,
-                        database, dan integrasi sistem sehingga lebih mudah
-                        dalam menganalisis masalah dari sisi teknis maupun pengalaman pengguna.
-                        Saya juga terbiasa berkolaborasi dengan developer,
-                        user, dan stakeholder untuk memastikan setiap fitur
-                        berjalan sesuai kebutuhan bisnis dan memiliki kualitas
-                        yang layak sebelum release.
-                    </p> */}
 
                     <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify">
-                        I believe application quality is not only about features working properly,
-                        but also about how the system remains stable, minimizes issues,
-                        and provides a smooth experience for users. Therefore, I am experienced in
-                        <span className="text-[#64ffda]"> manual testing</span>,
-                        <span className="text-[#64ffda]"> automation testing</span>,
-                        <span className="text-[#64ffda]"> regression testing</span>,
-                        <span className="text-[#64ffda]"> UAT</span>,
-                        <span className="text-[#64ffda]"> bug reporting</span>, and
-                        <span className="text-[#64ffda]"> system validation</span>
-                        to ensure every release is truly ready for production use.
+                        I believe software quality is not only about finding bugs, but also about ensuring every feature works as expected, business workflows remain reliable, and users can confidently use the system in production.
                     </p>
 
                     <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify mt-6">
-                        For more than
-                        <span className="text-white font-medium"> 1.5 years</span>,
-                        I have been involved in the development and testing of both web and mobile applications,
-                        including HR systems and various internal company applications.
-                        I frequently handle issues such as post-deployment bugs,
-                        feature workflows that do not align with user requirements,
-                        and unstable system integrations.
-                        To address these challenges, I am accustomed to creating
+                        Over the past
+                        <span className="text-white font-medium"> two years</span>,
+                        I have been involved in testing and validating
+                        <span className="text-[#64ffda]"> web</span> and
+                        <span className="text-[#64ffda]"> mobile applications</span>,
+                        creating
+                        <span className="text-[#64ffda]"> test plans</span> and
                         <span className="text-[#64ffda]"> test cases</span>,
                         performing
-                        <span className="text-[#64ffda]"> API validation</span>,
-                        preparing
-                        <span className="text-[#64ffda]"> bug documentation</span>, and conducting
-                        <span className="text-[#64ffda]"> end-to-end testing</span>
-                        to make the testing process more structured and easier for the development team to follow up.
+                        <span className="text-[#64ffda]"> manual testing</span> and
+                        <span className="text-[#64ffda]"> API testing</span>,
+                        investigating
+                        <span className="text-[#64ffda]"> production issues</span>,
+                        and collaborating with developers and stakeholders throughout the software development lifecycle.
                     </p>
 
                     <p className="text-gray-300 text-lg md:text-xl leading-relaxed text-justify mt-6">
-                        Supported by my experience as a
-                        <span className="text-white font-medium"> Full Stack Web Developer</span>,
-                        I have a strong understanding of application workflows,
-                        databases, and system integrations, which helps me analyze issues
-                        from both technical and user experience perspectives.
-                        I am also accustomed to collaborating with developers,
-                        users, and stakeholders to ensure every feature
-                        meets business requirements and achieves the expected quality
-                        before release.
+                        My previous experience as a
+                        <span className="text-white font-medium"> Full Stack Web Developer</span>
+                        provides me with a strong programming foundation and a deeper understanding of
+                        <span className="text-[#64ffda]"> APIs</span>,
+                        <span className="text-[#64ffda]"> databases</span>,
+                        <span className="text-[#64ffda]"> business logic</span>, and
+                        <span className="text-[#64ffda]"> system integrations</span>.
+                        This enables me to investigate issues beyond the surface and contribute effectively to delivering reliable software.
+                    </p>
+                </div>
+            </section>
+
+            {/* ===== MY QA PROCESS SECTION ===== */}
+            <section
+                id="qa-process"
+                className="bg-[#0a192f] py-20 px-6"
+            >
+                <div className="max-w-5xl mx-auto">
+
+                    {/* TITLE */}
+                    <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16">
+                        My QA Process
+                    </h2>
+
+                    {/* PROCESS */}
+                    <div className="bg-[#112240] rounded-2xl border border-[#64ffda]/10 p-10">
+
+                        <div className="flex flex-col items-center">
+
+                            <div className="text-center">
+                                <h3 className="text-white text-2xl font-semibold">
+                                    Requirement Analysis
+                                </h3>
+                            </div>
+
+                            <span className="text-[#64ffda] text-3xl my-4">↓</span>
+
+                            <h3 className="text-white text-2xl font-semibold">
+                                Test Planning
+                            </h3>
+
+                            <span className="text-[#64ffda] text-3xl my-4">↓</span>
+
+                            <h3 className="text-white text-2xl font-semibold">
+                                Test Case Design
+                            </h3>
+
+                            <span className="text-[#64ffda] text-3xl my-4">↓</span>
+
+                            <h3 className="text-white text-2xl font-semibold">
+                                Manual & API Testing
+                            </h3>
+
+                            <span className="text-[#64ffda] text-3xl my-4">↓</span>
+
+                            <h3 className="text-white text-2xl font-semibold">
+                                Bug Investigation
+                            </h3>
+
+                            <span className="text-[#64ffda] text-3xl my-4">↓</span>
+
+                            <h3 className="text-white text-2xl font-semibold">
+                                Regression Testing
+                            </h3>
+
+                            <span className="text-[#64ffda] text-3xl my-4">↓</span>
+
+                            <h3 className="text-white text-2xl font-semibold">
+                                Release Validation
+                            </h3>
+
+                            <span className="text-[#64ffda] text-3xl my-4">↓</span>
+
+                            <h3 className="text-white text-2xl font-semibold">
+                                Production Monitoring
+                            </h3>
+
+                        </div>
+                    </div>
+
+                    {/* DESCRIPTION */}
+                    <p className="max-w-4xl mx-auto mt-12 text-center text-gray-300 text-lg leading-relaxed">
+                        Every release starts with understanding the
+                        <span className="text-white font-medium"> business requirement</span>.
+                        I focus on identifying
+                        <span className="text-[#64ffda]"> potential risks</span> early,
+                        validating application behavior through
+                        <span className="text-[#64ffda]"> structured testing</span>,
+                        collaborating closely with
+                        <span className="text-[#64ffda]"> developers</span>,
+                        and ensuring every release meets
+                        <span className="text-[#64ffda]"> quality standards</span>
+                        before deployment.
                     </p>
 
                 </div>
             </section>
 
-            {/* ===== QA CONTRIBUTION SECTION ===== */}
-            <section
-                id="qa-contribution"
-                className="bg-[#112240] py-20 px-6"
-            >
-                <div className="max-w-6xl mx-auto">
+            {/* ===== EXPERIENCE SECTION ===== */}
+            <section id="experience" className="bg-[#112240] py-20">
+                <div className="max-w-6xl mx-auto px-6">
+
                     {/* TITLE */}
                     <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16">
-                        QA Contribution
+                        Experience
                     </h2>
 
-                    {/* GRID */}
+                    <div className="space-y-10">
 
-                    <div className="grid md:grid-cols-2 gap-8">
-
-                        {/* CARD 1 */}
+                        {/* EXPERIENCE 1 */}
                         <motion.div
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
-                            className="bg-[#0a192f] p-8 rounded-2xl border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all shadow-lg hover:shadow-[#64ffda]/10"
+                            className="bg-[#0a192f] rounded-2xl p-8 border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all"
                         >
-                            <div className="text-[#64ffda] text-4xl mb-5">🛡️</div>
-
-                            <h3 className="text-white text-2xl font-semibold mb-4">
-                                Release Stability & Regression Testing
+                            <h3 className="text-white text-2xl font-bold">
+                                QA Engineer & Project Manager
                             </h3>
 
-                            <p className="text-gray-300 leading-relaxed text-lg">
-                                Conducting regression testing and feature validation before deployment
-                                to help minimize post-release bugs and maintain the stability
-                                of web and mobile applications during user operations.
+                            <p className="text-[#64ffda] text-lg mt-2 mb-8">
+                                PT Stechoq Robotika Indonesia
                             </p>
+
+                            <h4 className="text-white font-semibold mb-4">
+                                What I Contributed
+                            </h4>
+
+                            <ul className="space-y-4 text-gray-300 leading-relaxed">
+                                <li>✔ Designed <span className="text-white font-medium">100+ test cases</span> and test plans for <span className="text-white font-medium">10+ production releases</span>.</li>
+
+                                <li>✔ Performed manual, regression, API, end-to-end, and UAT testing across complex government workflows.</li>
+
+                                <li>✔ Investigated database synchronization issues, business logic inconsistencies, and system integration problems to identify root causes.</li>
+
+                                <li>✔ Coordinated QA activities with developers and stakeholders to ensure every release was production-ready.</li>
+                            </ul>
                         </motion.div>
 
-                        {/* CARD 2 */}
+                        {/* EXPERIENCE 2 */}
                         <motion.div
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
                             viewport={{ once: true }}
-                            className="bg-[#0a192f] p-8 rounded-2xl border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all shadow-lg hover:shadow-[#64ffda]/10"
+                            className="bg-[#0a192f] rounded-2xl p-8 border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all"
                         >
-                            <div className="text-[#64ffda] text-4xl mb-5">📋</div>
-
-                            <h3 className="text-white text-2xl font-semibold mb-4">
-                                Structured Bug Reporting & Faster Validation
+                            <h3 className="text-white text-2xl font-bold">
+                                Full Stack Developer
                             </h3>
 
-                            <p className="text-gray-300 leading-relaxed text-lg">
-                                Creating testing checklists, bug documentation, and validation reports
-                                that help developers accelerate issue tracking,
-                                retesting, and feature fixes before release.
+                            <p className="text-[#64ffda] text-lg mt-2 mb-8">
+                                PT QHome Sukses Abadi
                             </p>
+
+                            <h4 className="text-white font-semibold mb-4">
+                                QA Contribution
+                            </h4>
+
+                            <ul className="space-y-4 text-gray-300 leading-relaxed">
+                                <li>✔ Tested and validated HRIS, QLearning, and ASM before deployment.</li>
+
+                                <li>✔ Validated <span className="text-white font-medium">45+ REST APIs</span> and identified <span className="text-white font-medium">15+ bugs</span> during development.</li>
+
+                                <li>✔ Tested complex HR workflows involving multi-level approvals, leave management, attendance, and shift scheduling.</li>
+
+                                <li>✔ Led UAT sessions, prepared QA documentation, and collaborated with users to validate business requirements.</li>
+                            </ul>
                         </motion.div>
 
-                        {/* CARD 3 */}
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== FEATURED QA CASE STUDIES ===== */}
+            <section id="case-studies" className="bg-[#0a192f] py-20">
+                <div className="max-w-6xl mx-auto px-6">
+
+                    <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16">
+                        Featured QA Case Studies
+                    </h2>
+
+                    <div className="grid lg:grid-cols-2 gap-8">
+
+                        {/* CASE STUDY 1 */}
                         <motion.div
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
+                            transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
-                            className="bg-[#0a192f] p-8 rounded-2xl border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all shadow-lg hover:shadow-[#64ffda]/10"
+                            className="bg-[#112240] rounded-2xl p-8 border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all"
                         >
-                            <div className="text-[#64ffda] text-4xl mb-5">🔗</div>
-
-                            <h3 className="text-white text-2xl font-semibold mb-4">
-                                API & System Integration Validation
+                            <h3 className="text-white text-2xl font-bold mb-8">
+                                HRIS Approval Workflow Investigation
                             </h3>
 
-                            <p className="text-gray-300 leading-relaxed text-lg">
-                                Performing API testing and validating Front-End,
-                                Back-End, and Database integrations using Postman and Hoppscotch
-                                to ensure accurate and consistent data synchronization.
-                            </p>
+                            <div className="space-y-6">
+
+                                <div>
+                                    <h4 className="text-[#64ffda] font-semibold mb-2">
+                                        Challenge
+                                    </h4>
+                                    <p className="text-gray-300">
+                                        Employee approval requests became stuck or skipped certain approvers due to different organizational structures.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 className="text-[#64ffda] font-semibold mb-2">
+                                        Investigation
+                                    </h4>
+
+                                    <ul className="space-y-2 text-gray-300">
+                                        <li>✔ Tested multiple approval hierarchies.</li>
+                                        <li>✔ Validated API responses.</li>
+                                        <li>✔ Compared database relationships.</li>
+                                        <li>✔ Reviewed approval mapping.</li>
+                                        <li>✔ Identified business logic inconsistencies.</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 className="text-[#64ffda] font-semibold mb-2">
+                                        Solution
+                                    </h4>
+
+                                    <p className="text-gray-300">
+                                        Worked with developers to improve approval logic and validated every approval scenario through regression testing.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 className="text-[#64ffda] font-semibold mb-2">
+                                        Result
+                                    </h4>
+
+                                    <p className="text-gray-300">
+                                        Approval workflows became consistent across all divisions and organizational structures before production deployment.
+                                    </p>
+                                </div>
+
+                            </div>
                         </motion.div>
 
-                        {/* CARD 4 */}
+                        {/* CASE STUDY 2 */}
                         <motion.div
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.3 }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
                             viewport={{ once: true }}
-                            className="bg-[#0a192f] p-8 rounded-2xl border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all shadow-lg hover:shadow-[#64ffda]/10"
+                            className="bg-[#112240] rounded-2xl p-8 border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all"
                         >
-                            <div className="text-[#64ffda] text-4xl mb-5">👥</div>
-
-                            <h3 className="text-white text-2xl font-semibold mb-4">
-                                HR System & User Workflow Validation
+                            <h3 className="text-white text-2xl font-bold mb-8">
+                                SINKAL Release Validation
                             </h3>
 
-                            <p className="text-gray-300 leading-relaxed text-lg">
-                                Conducting testing for HR systems and various internal applications
-                                together with users and cross-functional teams to ensure workflows,
-                                approval processes, and operational features align with business requirements
-                                and require minimal revisions after implementation.
-                            </p>
+                            <div className="space-y-6">
+
+                                <div>
+                                    <h4 className="text-[#64ffda] font-semibold mb-2">
+                                        Challenge
+                                    </h4>
+
+                                    <p className="text-gray-300">
+                                        Planning and budgeting data became inconsistent because changes in one module were not synchronized with another.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 className="text-[#64ffda] font-semibold mb-2">
+                                        Investigation
+                                    </h4>
+
+                                    <ul className="space-y-2 text-gray-300">
+                                        <li>✔ Compared planning and execution data.</li>
+                                        <li>✔ Validated database synchronization.</li>
+                                        <li>✔ Tested API integration.</li>
+                                        <li>✔ Verified user workflows.</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 className="text-[#64ffda] font-semibold mb-2">
+                                        Result
+                                    </h4>
+
+                                    <p className="text-gray-300">
+                                        Successfully validated the fixes before release and ensured data consistency across interconnected modules.
+                                    </p>
+                                </div>
+
+                            </div>
                         </motion.div>
 
                     </div>
 
-
-
-                </div>
-            </section>
-
-            {/* ===== SKILLS SECTION ===== */}
-            <section id="skills" className="bg-[#112240] py-20 text-center">
-                <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold mb-16">
-                    My Skills
-                </h2>
-
-                <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
-                    {Object.entries(skills).map(([category, items], index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 40 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                            className="bg-[#0a192f] rounded-xl p-6 shadow-lg hover:shadow-[#64ffda]/20 transition-all text-left"
-                        >
-                            {/* Category Title */}
-                            <h3 className="text-[#64ffda] text-xl font-semibold mb-4">
-                                {category}
-                            </h3>
-
-                            {/* Skills List */}
-                            <div className="flex flex-wrap gap-3">
-                                {items.map((skill, i) => (
-                                    <motion.span
-                                        key={i}
-                                        whileHover={{ scale: 1.08 }}
-                                        className="bg-[#112240] text-white text-sm px-4 py-2 rounded-full border border-[#64ffda]/30 hover:bg-[#64ffda]/10 transition"
-                                    >
-                                        {skill}
-                                    </motion.span>
-                                ))}
-                            </div>
-                        </motion.div>
-                    ))}
                 </div>
             </section>
 
 
-            {/* ===== PORTFOLIO SECTION ===== */}
-            <section id="project" className="bg-[#0a192f] py-20 px-6 text-center">
+            {/* ===== PROJECT SECTION ===== */}
+            <section id="project" className="bg-[#112240] py-20 px-6 text-center">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold mb-12">
-                        Project
+                        Projects
                     </h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -461,7 +621,7 @@ export default function Home() {
                             <motion.div
                                 key={i}
                                 whileHover={{ scale: 1.03 }}
-                                className="bg-[#112240] rounded-lg overflow-hidden shadow-md hover:shadow-[#64ffda]/20 cursor-pointer transition"
+                                className="bg-[#0a192f] rounded-lg overflow-hidden shadow-md hover:shadow-[#64ffda]/20 cursor-pointer transition"
                                 onClick={() => openModal(project)}
                             >
                                 <img
@@ -594,10 +754,50 @@ export default function Home() {
 
             </section>
 
+            {/* ===== QA ARTIFACTS SECTION ===== */}
+            
+
+            {/* ===== SKILLS SECTION ===== */}
+            <section id="skills" className="bg-[#112240] py-20 text-center">
+                <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold mb-16">
+                    My Skills
+                </h2>
+
+                <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+                    {Object.entries(skills).map(([category, items], index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            viewport={{ once: true }}
+                            className="bg-[#0a192f] rounded-xl p-6 shadow-lg hover:shadow-[#64ffda]/20 transition-all text-left"
+                        >
+                            {/* Category Title */}
+                            <h3 className="text-[#64ffda] text-xl font-semibold mb-4">
+                                {category}
+                            </h3>
+
+                            {/* Skills List */}
+                            <div className="flex flex-wrap gap-3">
+                                {items.map((skill, i) => (
+                                    <motion.span
+                                        key={i}
+                                        whileHover={{ scale: 1.08 }}
+                                        className="bg-[#112240] text-white text-sm px-4 py-2 rounded-full border border-[#64ffda]/30 hover:bg-[#64ffda]/10 transition"
+                                    >
+                                        {skill}
+                                    </motion.span>
+                                ))}
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </section>
             {/* ===== CONTACT SECTION ===== */}
             <section
                 id="contact"
-                className="bg-[#112240] py-20 px-6 flex flex-col items-center text-center"
+                className="bg-[#0a192f] py-20 px-6 flex flex-col items-center text-center"
             >
                 <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold mb-12">
                     Contact Me
@@ -625,7 +825,7 @@ export default function Home() {
                             href={c.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-[#0a192f] p-5 rounded-lg text-[#64ffda] hover:bg-[#64ffda] hover:text-[#0a192f] transition transform hover:scale-105"
+                            className="bg-[#112240] p-5 rounded-lg text-[#64ffda] hover:bg-[#64ffda] hover:text-[#0a192f] transition transform hover:scale-105"
                         >
                             {c.label}: <span className="font-semibold">{c.text}</span>
                         </a>
