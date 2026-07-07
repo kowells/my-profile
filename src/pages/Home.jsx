@@ -48,31 +48,6 @@ export default function Home() {
             link: "/private",
             tools: ["Codeigniter 3", "MySQL"],
         },
-        // {
-        //     title: "Qlearning",
-        //     description:
-        //         "Web Learning Management System untuk e-learning interaktif.",
-        //     images: ["/images/qlearning.png", "/images/qlearning.png"],
-        //     link: "/private",
-        //     tools: ["Codeigniter 4", "Datatables", "PHP", "MySQL"],
-        // },
-        // {
-        //     title: "Bookshelf API",
-        //     description:
-        //         "API sederhana untuk mengelola catatan buku menggunakan Node.js dan Hapi Framework.",
-        //     images: ["/images/notes.jpg", "/images/notes.png"],
-        //     link: "https://github.com/kowells/notes-app-back-end",
-        //     tools: ["Node.js", "Hapi", "Jest", "Postman"],
-        // },
-
-        // {
-        //     title: "People Counting Using YOLOv8",
-        //     description:
-        //         "Sistem deteksi dan perhitungan pengunjung real-time menggunakan YOLOv8.",
-        //     images: ["/images/people-counting.png", "/images/people-counting.png"],
-        //     link: "/private",
-        //     tools: ["Python", "YOLOv8", "OpenCV", "Realtime"],
-        // },
 
     ];
 
@@ -167,7 +142,7 @@ export default function Home() {
 
                     <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
                         <a
-                            href="https://drive.google.com/file/d/1UWC_EFGSnY5drsqe_6shjRuSlS-yy2Sy/view?usp=sharing/view"
+                            href="https://drive.google.com/file/d/1tNzUWwmM-il3986DD_CsFyQdm3EOspM2/view"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-[#64ffda] text-[#0a192f] py-2.5 px-8 rounded-md text-base font-medium hover:bg-transparent hover:text-[#64ffda] border border-[#64ffda] transition-all duration-300"
