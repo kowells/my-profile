@@ -730,7 +730,150 @@ export default function Home() {
             </section>
 
             {/* ===== QA ARTIFACTS SECTION ===== */}
-            
+            {/* ===== QA ARTIFACTS SECTION ===== */}
+
+            <section
+                id="qa-artifacts"
+                className="bg-[#0a192f] py-20 px-6"
+            >
+                <div className="max-w-6xl mx-auto">
+
+                    {/* TITLE */}
+                    <h2 className="text-[#64ffda] text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16">
+                        QA Artifacts
+                    </h2>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                        {/* Test Plan */}
+                        <motion.a
+                            href="https://docs.google.com/document/d/1JP4lOzzFTpVnozAWBNuWUqCRg4GdD8-JsPgero8jop8/edit?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.03 }}
+                            className="bg-[#112240] rounded-2xl p-8 border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all cursor-pointer block"
+                        >
+                            <div className="text-5xl mb-6">📄</div>
+
+                            <h3 className="text-white text-2xl font-semibold mb-4">
+                                Test Plan
+                            </h3>
+
+                            <p className="text-gray-300 leading-relaxed">
+                                Document defining testing objectives, scope, strategy,
+                                resources, schedule, and overall testing approach.
+                            </p>
+
+                            <div className="text-[#64ffda] mt-6 font-medium">
+                                View Document →
+                            </div>
+                        </motion.a>
+
+
+                        {/* Test Cases */}
+                        <motion.a
+                            href="https://docs.google.com/spreadsheets/d/1rCsqCycnPf4n1PrrNobqoiguLOpPsYoHvmK_Rh0uuzs/edit?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.03 }}
+                            className="bg-[#112240] rounded-2xl p-8 border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all cursor-pointer block"
+                        >
+                            <div className="text-5xl mb-6">📋</div>
+
+                            <h3 className="text-white text-2xl font-semibold mb-4">
+                                Test Cases
+                            </h3>
+
+                            <p className="text-gray-300 leading-relaxed">
+                                Structured test cases covering functional, negative,
+                                validation, and edge-case scenarios.
+                            </p>
+
+                            <div className="text-[#64ffda] mt-6 font-medium">
+                                View Document →
+                            </div>
+                        </motion.a>
+
+
+                        {/* Test Execution Report */}
+                        <motion.a
+                            href="https://docs.google.com/document/d/1Ppq86dayp06ZPYbtxbmGDSFSJ-OO1Kq9PaWtSrrrt0w/edit?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.03 }}
+                            className="bg-[#112240] rounded-2xl p-8 border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all cursor-pointer block"
+                        >
+                            <div className="text-5xl mb-6">🧪</div>
+
+                            <h3 className="text-white text-2xl font-semibold mb-4">
+                                Test Execution Report
+                            </h3>
+
+                            <p className="text-gray-300 leading-relaxed">
+                                Report documenting test execution results, passed and
+                                failed test cases, defects, and testing progress.
+                            </p>
+
+                            <div className="text-[#64ffda] mt-6 font-medium">
+                                View Document →
+                            </div>
+                        </motion.a>
+
+
+                        {/* Test Summary Report */}
+                        <motion.a
+                            href="https://docs.google.com/document/d/1-2dwdrozyPHv9_ZhC-Yuzza6tVihkRC174im1Q2U7yM/edit?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.03 }}
+                            className="bg-[#112240] rounded-2xl p-8 border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all cursor-pointer block"
+                        >
+                            <div className="text-5xl mb-6">📊</div>
+
+                            <h3 className="text-white text-2xl font-semibold mb-4">
+                                Test Summary Report
+                            </h3>
+
+                            <p className="text-gray-300 leading-relaxed">
+                                Summary of overall testing activities, test results,
+                                defect status, risks, and release readiness.
+                            </p>
+
+                            <div className="text-[#64ffda] mt-6 font-medium">
+                                View Document →
+                            </div>
+                        </motion.a>
+
+
+                        {/* Bug Report */}
+                        <motion.a
+                            href="https://docs.google.com/document/d/1C-zKreLieYjDuHCDUumJO7LWrBCyTRz-9xNnr9nAjNU/edit?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.03 }}
+                            className="bg-[#112240] rounded-2xl p-8 border border-[#64ffda]/10 hover:border-[#64ffda]/40 transition-all cursor-pointer block md:col-span-2 lg:col-span-1"
+                        >
+                            <div className="text-5xl mb-6">🐛</div>
+
+                            <h3 className="text-white text-2xl font-semibold mb-4">
+                                Bug Report
+                            </h3>
+
+                            <p className="text-gray-300 leading-relaxed">
+                                Detailed defect reports containing reproduction steps,
+                                expected and actual results, severity, priority, and
+                                supporting evidence.
+                            </p>
+
+                            <div className="text-[#64ffda] mt-6 font-medium">
+                                View Document →
+                            </div>
+                        </motion.a>
+
+                    </div>
+
+                </div>
+            </section>
 
             {/* ===== SKILLS SECTION ===== */}
             <section id="skills" className="bg-[#112240] py-20 text-center">
