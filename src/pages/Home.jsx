@@ -69,7 +69,10 @@ export default function Home() {
         "Tools": [
             "Postman",
             "Playwright",
-            "Git & GitHub"
+            "Git & GitHub",
+            "Maestro",
+            "Allure Report",
+
         ],
         "Technical Basics": [
             "JavaScript",
