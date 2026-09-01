@@ -19,7 +19,7 @@ export default function Home() {
         {
             title: "SINKAL Public Portal",
             description:
-                "Executed manual and automated testing for a government information system, validating public workflows, forms, and critical user journeys before deployment.",
+                "Executed automated testing for a government information system, validating public workflows, forms, and critical user journeys before deployment.",
             images: ["/images/sinkal1.png", "/images/sinkal3.png", "/images/sinkal2.png"],
             link: "https://github.com/kowells/sinkal-publik-testing",
             tools: ["Playwright", "Spreadsheet", "Open Project"],
